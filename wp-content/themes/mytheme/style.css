@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/*
+Theme Name: MY THEME
+Author: HIDEYOVIC
+Description: How can I get job?
+Version: 1.0
+*/
+
+body {
+	margin: 0;
+	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+	line-height: 1.5;
+}

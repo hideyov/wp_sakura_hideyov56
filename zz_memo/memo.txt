@@ -1,0 +1,11 @@
+********
+191001
+********
+
+wp_headerと wo_footer
+
+WordPressのテーマでは、</head>の前に <?php wp_head(); ?> を、</body> の前に <?php wp_footer(); ?> を入れる決まりになっている。これらは WordPress のシステムやプラグインがコードを出力するために使用する。
+
+常に最新のスタイルシートを読み込ませる
+URLの末尾に<?php echo date('U'); ?>でページ生成時の日時をUnix時間で出力し、引数として付加。
+<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?ver=<?php echo date('U'); ?>">

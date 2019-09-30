@@ -1,0 +1,7 @@
+エディターを色分けとかするプラグイン WP Editor が、ダッシュボードの「プラグイン」では見つからなかった。
+https://wordpress.org/plugins/wp-editor
+からダウンロードした、zipファイルを、新規追加 > プラグインのアップロード でインストールできる。
+
+その際、サーバー上の wp-content/plugins に、 WP Editor フォルダを作成する必要はない。作成すると、インストールに失敗する。
+なお、インストール成功後、wp-content/plugins に WP Editor フォルダが見つからないが、どこに保存されるのだろう？
+
