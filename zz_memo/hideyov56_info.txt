@@ -1,0 +1,7 @@
+ログインパスワード再設定 (191001)
+
+hideyov.sakura.ne.jp/hideyov56/wp-login.php
+
+サイト名：hideyovic56
+ユーザ名： hideyovic
+pw： hideyov_56_getJob
