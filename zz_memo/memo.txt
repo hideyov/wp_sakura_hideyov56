@@ -9,3 +9,11 @@ WordPressのテーマでは、</head>の前に <?php wp_head(); ?> を、</body>
 常に最新のスタイルシートを読み込ませる
 URLの末尾に<?php echo date('U'); ?>でページ生成時の日時をUnix時間で出力し、引数として付加。
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?ver=<?php echo date('U'); ?>">
+
+********
+191002
+********
+
+プラグイン画面で、大量のWarning が表示されるのは、デバッグモードにしているため。
+wp-config.php の define('WP_DEBUG', true); を、false にすると警告は消えるが、trueのままにしておく。
+

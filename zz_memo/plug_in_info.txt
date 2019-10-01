@@ -5,3 +5,11 @@ https://wordpress.org/plugins/wp-editor
 その際、サーバー上の wp-content/plugins に、 WP Editor フォルダを作成する必要はない。作成すると、インストールに失敗する。
 なお、インストール成功後、wp-content/plugins に WP Editor フォルダが見つからないが、どこに保存されるのだろう？
 
+*******
+191002
+*******
+
+Pixabay Images プラグインをDLして手動インストールした。
+
+Flickr Album Gallery もインストールしたが、こちらは記事編集画面にボタンが表示されるわけではない。
+

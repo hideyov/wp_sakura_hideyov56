@@ -49,35 +49,49 @@ footer {
 }
 
 /* ボックスの左右の余白 */
-header, footer, .container {
+header,
+footer,
+.container {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
 @media (min-width: 768px) {
+
 	/* コンテンツとサイドバーを横に並べる */
 	.container:after {
 		content: "";
 		display: block;
 		clear: both;
 	}
-	
+
 	.contents {
 		float: left;
 		width: 70%;
 	}
-	
+
 	.sub {
 		float: left;
 		width: 30%;
 	}
-	
+
 	/* コンテンツとサイドバーの間隔(横並び時のみ) */
 	.contents {
 		padding-right: 50px;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
+	}
+}
+
+@media (min-width: 1040px) {
+	/* 全体の横幅 */
+	.container,
+	.header-inner,
+	.footer-inner {
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -104,7 +118,7 @@ header, footer, .container {
 .copyright p {
 	margin: 0;
 	color: #666666;
-	font-size: 0.8rem;
+	font-size: 0.875rem;
 }
 
 /* ------ 記事の概要 ------ */
@@ -130,7 +144,7 @@ header, footer, .container {
 
 .gaiyou p {
 	margin: 0;
-	font-size: 0.8rem;
+	font-size: 0.875rem;
 }
 
 /* ------ article 記事 ------ */
@@ -145,6 +159,16 @@ header, footer, .container {
 .kiji p {
 	margin-top: 0;
 	margin-bottom: 20px;
+}
+
+@media (max-width: 599px) {
+	.kiji h1 {
+		font-size: 1.5rem;
+	}
+
+	.kiji p {
+		font-size: 0.875rem;
+	}
 }
 
 /* ------ side bar ------ */
