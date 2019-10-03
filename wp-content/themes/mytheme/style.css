@@ -85,6 +85,7 @@ footer,
 }
 
 @media (min-width: 1040px) {
+
 	/* 全体の横幅 */
 	.container,
 	.header-inner,
@@ -150,6 +151,13 @@ footer,
 /* ------ article 記事 ------ */
 
 /* 記事 */
+
+.kiji:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 .kiji h1 {
 	margin-top: 0;
 	margin-bottom: 10px;
@@ -198,4 +206,64 @@ footer,
 
 .mymenu li a:hover {
 	background-color: #eeeeee;
+}
+
+/* ------ images 画像 ------ */
+
+/* caption */
+.wp-caption-text {
+	margin: 0;
+	color: #666666;
+	font-size: 0.625rem;
+	text-align: center;
+}
+
+.wp-caption-text a {
+	color: #666666;
+}
+
+/* 画像の配置 */
+.aligncenter {
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 599px) {
+	.alignleft, .alignright {
+		display: block;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (min-width: 600px) {
+	.alignleft {
+		float: left;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		margin-right: 30px;
+	}
+
+	.alignright {
+		float: right;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		margin-left: 30px;
+	}
+}
+
+/* IE10以下への対応 */
+a img {
+	border: none;
+}
+
+/* 大きい画像の表示設定 */
+img, .wp-caption {
+	max-width: 100%;
+	height: auto;
 }
