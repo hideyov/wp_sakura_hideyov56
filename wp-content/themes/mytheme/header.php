@@ -9,7 +9,9 @@
 	</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<script src="https://kit.fontawesome.com/4e5eb2ce7f.js" crossorigin="anonymous"></script>
+<!--	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Mansalva|Special+Elite&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?ver=<?php echo date('U'); ?>">
 
 	<!--[if lt IE 9]>
@@ -26,7 +28,7 @@
 			<div class="site">
 				<h1>
 					<a href="<?php echo home_url(); ?>">
-						<?php bloginfo( 'name' ); ?>
+						<img src="<?php echo get_template_directory_uri(); ?>/logo_skia_trans-4x.png" alt="<?php bloginfo('name'); ?>" width="133" height="30">
 					</a>
 				</h1>
 			</div>

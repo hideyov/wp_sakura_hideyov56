@@ -23,6 +23,27 @@ wp-config.php の define('WP_DEBUG', true); を、false にすると警告は消
 
 画像のレスポンシブ対応で、画面幅が599px以下の時にimgを中央寄せする設定が反映されず（？）プチはまる。ダッシュボードの「投稿を表示」では、CSSがリアルに反映されないのか？
 
+[3-4 外部コンテンツを貼り込む]
+こちらはYoutube の URL貼り付けと違って、動画ファイルアップロードの話。
+
+アイキャッチ画像の設定項目が表示されない？？
+テーマの作成者が明示的にアイキャッチ画像の機能を有効にしないといけない。
+つまり functions.php に add_theme_support('post-thumbnails'); が追記してあるか。
+https://umebius.com/wordpress/settings-eyecatch/
+
+[!!! caution !!!] 'post-thumbnails' の '-' を '_' に間違っていた。修正したら解決。
+
+[??? question ???] アイキャッチを設定しても、なぜか反映されない記事がある。「ジャカルタ」など。sourceを見ると class="catch" となっているのに、なぜ？
+
+[!!! caution !!!]
+font-awesome の導入方法が変わった！
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+ではなく、サインインして、kitを入手して下記コードを head内に書く。
+<script src="https://kit.fontawesome.com/4e5eb2ce7f.js" crossorigin="anonymous"></script>
+
+
+
+
 
 
 
