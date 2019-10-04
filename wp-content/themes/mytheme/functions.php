@@ -45,7 +45,7 @@ function editor_setting($init) {
 		array(
 			'title' => '補足情報',
 			'block' => 'div',
-			'classes' => 'point'
+			'classes' => 'point',
 			'wrapper' => true
 		),
 		array(

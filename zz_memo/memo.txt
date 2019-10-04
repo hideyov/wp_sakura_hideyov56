@@ -49,3 +49,13 @@ FBで記事共有した時、アイキャッチ画像がない記事には、"[c
 4-8 「記事の編集画面を生成ページと同じデザインで表示する」
 以上は省略。
 
+******
+191005
+******
+
+[??? error !!!]
+Parse error: syntax error, unexpected ''wrapper'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/hideyov/www/hideyov56/wp-content/themes/mytheme/functions.php on line 49
+サイトで技術的な問題が発生しています。サイト管理者のメールを確認して指示に従ってください。
+[!!!]
+
+独自マークアップ選択肢追加のstyle指定で 'wrapper' => true を追記した際に、前行に ',' を付け忘れたのが原因。
