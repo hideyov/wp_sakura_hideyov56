@@ -32,14 +32,18 @@ footer {
 	border-top: solid 1px #dddddd;
 }
 
-/* ボックスの上下間隔 */
+/* Box ボックスの上下間隔 */
+.sub-header {
+	padding-top: 5px;
+}
+
 .contents {
-	padding-top: 30px;
+	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
 .sub {
-	padding-top: 30px;
+	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
@@ -48,10 +52,17 @@ footer {
 	padding-bottom: 15px;
 }
 
-/* ボックスの左右の余白 */
+@media (max-width: 599px) {
+	.contents {
+		padding-top: 10px;
+	}
+}
+
+/* Box ボックスの左右の余白 */
 header,
 footer,
-.container {
+.container,
+.sub-header {
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -89,7 +100,8 @@ footer,
 	/* 全体の横幅 */
 	.container,
 	.header-inner,
-	.footer-inner {
+	.footer-inner,
+	.sub-header {
 		width: 1000px;
 		margin-left: auto;
 		margin-right: auto;
@@ -118,6 +130,11 @@ footer,
 }
 
 /* ------ Footer ------ */
+/* description */
+.description {
+	font-family: 'Special Elite', sans-serif;
+	font-size: 0.8rem;
+}
 
 /* copyright */
 .copyright p {
@@ -183,6 +200,37 @@ footer,
 	}
 }
 
+/* h2 小見出し */
+.kiji h2 {
+	position: relative;
+	margin-top: 40px;
+	padding-left: 8px;
+	padding-bottom: 5px;
+	border-bottom: solid 2px #00a0e9;
+	border-left: solid 6px #00a0e9;
+	font-size: 1.5rem;
+	clear: both;
+}
+
+/*
+.kiji h2:before {
+	position: absolute;
+	left: 0px;
+	top: 3px;
+	content: '\f14a';
+	color: #00a0e9;
+	font-family: 'FontAwesome';
+	font-size: 1.75rem;
+	line-height: 1;
+}
+*/
+
+@media (max-width: 599px) {
+	.kiji h2 {
+		font-size: 1.2rem;
+	}
+}
+
 /* 投稿日と更新日 */
 .kiji-date {
 	margin-bottom: 20px;
@@ -232,6 +280,118 @@ footer,
 .kiji-tag li {
 	float: left;
 	width: auto;
+}
+
+/* breadcrumb パンくずリスト */
+.bread ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.bread li a {
+	display: inline-block;
+	padding: 5px 5px;
+	color: #888888;
+	font-size: 0.75rem;
+	text-decoration: none;
+}
+
+.bread li a[href]:hover {
+	background-color: #eeeeee;
+}
+
+.bread ol:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.bread li {
+	float: left;
+	width: auto;
+}
+
+.bread li:after {
+	content: '\003e';
+	margin-left: 2px;
+	margin-right: 2px;
+	color: #888888;
+}
+
+.bread li:last-child:after {
+	content: none;
+}
+
+.bread i {
+	font-size: 0.825rem;
+}
+
+.bread span {
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+@media (max-width: 599px) {
+	.bread li:last-child {
+		text-indent: -9999px;
+	}
+}
+
+/* ------ Share button シェアボタン ------ */
+.share {
+	margin-top: 40px;
+	clear: both;
+}
+
+.share ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.share li a {
+	display: block;
+	padding: 8px 17px;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 0.75rem;
+	text-decoration: none;
+}
+
+.share li a:hover {
+	opacity: 0.8;
+}
+
+.share ul:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.share li {
+	float: left;
+	width: auto;
+	margin-right: 5px;
+}
+
+.share-tw {
+	background-color: #55acee;
+}
+
+.share-fb {
+	background-color: #3b5998;
+}
+
+@media (max-width: 599px) {
+	.share span {
+		display: inline-block;
+		text-indent: -9999px;
+	}
+	
+	.share li a {
+		padding: 8px 10px;
+	}
 }
 
 /* ------ side bar ------ */

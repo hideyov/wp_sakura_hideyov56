@@ -41,9 +41,11 @@ font-awesome の導入方法が変わった！
 ではなく、サインインして、kitを入手して下記コードを head内に書く。
 <script src="https://kit.fontawesome.com/4e5eb2ce7f.js" crossorigin="anonymous"></script>
 
+[??? question ???]
+FBで記事共有した時、アイキャッチ画像がない記事には、"[caption id=" がつく。
 
-
-
-
-
+[!!! Omitted! Flew 飛ばした !!!]
+4-7 「編集画面に独自マークアップの選択肢を追加する」
+4-8 「記事の編集画面を生成ページと同じデザインで表示する」
+以上は省略。
 

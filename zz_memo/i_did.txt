@@ -7,3 +7,12 @@
 wp-config.php を編集してデバッグモードをオン
 define('WP_DEBUG', true)
 
+********
+191004
+*******
+
+footerの .description に、Google font の 'Special Elite' を利用。
+
+[パンくずリスト / breadcrumb list]
+記事が複数カテゴリーに属してる場合のパンくずリスト：親 > 子 / 親 > 子 > 孫　が重複して出力されて、無駄にスペースを取る。この重複を避ける方法がわかるまでは見送り。
+

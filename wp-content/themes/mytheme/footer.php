@@ -1,7 +1,7 @@
 <footer>
 	<div class="footer-inner">
 		<div class="copyright">
-			<p>
+			<p class="description">
 				<?php bloginfo( 'description' ); ?>
 			</p>
 			<p>Copyright &copy;
