@@ -3,27 +3,18 @@
 <div class="container">
 	<div class="contents">
 		<?php if(have_posts()): while(have_posts()): the_post(); ?>
-		<article <?php post_class('gaiyou'); ?>>
-			<a href="<?php the_permalink(); ?>">
-
-				<img src="<?php echo mythumb('medium'); ?>" alt="">
-
-				<h1>
-					<?php the_title(); ?>
-				</h1>
-
-				<div class="kiji-date">
-					<i class="fa fa-pencil"></i>
-					<time datetime="<?php echo get_the_date('Y-m-d'); ?>">
-						投稿：
-						<?php echo get_the_date(); ?>
-					</time>
-				</div>
-
-				<?php the_excerpt(); ?>
-			</a>
-		</article>
+		
+		<?php get_template_part('overview', 'medium'); ?>	
+		
 		<?php endwhile; endif; ?>
+		
+		<div class="pagination pagination-index">
+			<?php echo paginate_links(array(
+				'type' => 'list',
+				'prev_text' => '&laquo;',
+				'next_text' => '&raquo;'
+			)); ?>
+		</div>
 	</div><!-- .contents -->
 
 	<div class="sub">

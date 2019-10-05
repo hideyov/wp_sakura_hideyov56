@@ -59,3 +59,19 @@ Parse error: syntax error, unexpected ''wrapper'' (T_CONSTANT_ENCAPSED_STRING), 
 [!!!]
 
 独自マークアップ選択肢追加のstyle指定で 'wrapper' => true を追記した際に、前行に ',' を付け忘れたのが原因。
+
+*******
+191006
+*******
+
+記事一覧ページの、サムネイルと記事概要を横並びにする CSS では、.text クラスの記事概要を float:none; として、サムネイル画像＋margin の分、左マージンをつけるのがポイント。
+
+小画面での記事概要非表示には、 visibility:hidden; に加えて height:0; を指定。
+
+[??? question ???]
+サムネイル画像がない場合、本文中に挿入した画像を出力する処理がうまくいかないので、下記3行とりあえずコメントアウトして、代替画像の表示にとどめておく。
+
+} elseif(preg_match('/wp-image-(\d+)/s', $post->post_content, $thumbid)) {
+	$postthumb = wp_get_attachment_image_src($thumbid[1], $size);
+	$url = $postthumb[0];
+
