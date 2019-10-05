@@ -57,6 +57,11 @@ function editor_setting($init) {
 			'title' => 'ハイライト',
 			'inline' => 'span',
 			'classes' => 'highlight'
+		),
+		array(
+			'title' => '整形済みコード',
+			'block' => 'pre',
+			'classes' => 'preformatted_code'
 		)
 	);
 	
@@ -72,3 +77,16 @@ function add_stylemenu($buttons){
 	return $buttons;
 }
 add_filter('mce_buttons_2', 'add_stylemenu');
+
+// thumbnail　サムネイル画像
+function mythumb($size) {
+	
+	if(has_post_thumbnail()) {
+		$postthumb = wp_get_attachment_image_src(get_post_thumbnail_id(), $size);
+		$url = $postthumb[0];
+	} else {
+		$url = get_template_directory_uri() . '/alt_image.png';
+	}
+	
+	return $url;
+}
