@@ -75,3 +75,21 @@ Parse error: syntax error, unexpected ''wrapper'' (T_CONSTANT_ENCAPSED_STRING), 
 	$postthumb = wp_get_attachment_image_src($thumbid[1], $size);
 	$url = $postthumb[0];
 
+*******
+191007
+*******
+
+[!!! tips! technique !!!]
+サムネイル画像を背景画像として表示して、自由なサイズにトリミングするには？
+
+<img>で
+読み込んだ画像をトリミングするのは難しく、新しいサイズの画像を自動生成するのも手間がかかるので、
+サムネイル画像を背景画像として表示し、簡単にトリミングできるようにする。
+ただし、style.css ではテンプレートタグが機能しないため、 background-image の指定はテンプレートファイル側に記述。
+背景画像を配置する div の横幅と高さを指定。また、背景画像をボックスに合わせて自動的に拡大・縮小するために、 background-size: cover; background-position: 50% 50%; に指定。
+
+[!!! tips! technique !!!]
+1件目の記事の概要のみを大きく表示するには？
+ループをコピーし、1件目の記事のみを処理する最初のループでは while(have_posts()): 〜 endwhile; を削除して if のみを使用。
+残りの記事を処理するループは、既存のループ（if, while）を使用。
+
