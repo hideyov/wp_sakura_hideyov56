@@ -783,3 +783,22 @@ iframe {
 		text-indent: 0;
 	}
 }
+
+/* navigation menu / ナビゲーションメニュー */
+.mainmenu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.mainmenu li a {
+	display: block;
+	padding: 10px 5px;
+	color: #000000;
+	font-size: 0.825rem;
+	text-decoration: none;
+}
+
+.mainmenu li a:hover {
+	background-color: #eeeeee;
+}

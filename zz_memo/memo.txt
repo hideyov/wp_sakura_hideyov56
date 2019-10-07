@@ -93,3 +93,14 @@ Parse error: syntax error, unexpected ''wrapper'' (T_CONSTANT_ENCAPSED_STRING), 
 ループをコピーし、1件目の記事のみを処理する最初のループでは while(have_posts()): 〜 endwhile; を削除して if のみを使用。
 残りの記事を処理するループは、既存のループ（if, while）を使用。
 
+******
+191008
+******
+
+[??? question ???]
+トップページ、カテゴリー・タグページのメタデータ。ツィッターでURLを共有しても、何も表示されないのはなぜ？？
+
+[!!! caution !!!]
+メニュー管理：
+ダッシュボード > 外観 > メニュー > [位置の管理] の選択を忘れるな！
+

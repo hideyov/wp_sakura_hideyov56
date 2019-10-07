@@ -93,3 +93,6 @@ function mythumb($size) {
 	
 	return $url;
 }
+
+// custom menu / カスタムメニュー
+register_nav_menu('sitenav', 'サイトナビゲーション');
