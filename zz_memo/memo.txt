@@ -104,3 +104,36 @@ Parse error: syntax error, unexpected ''wrapper'' (T_CONSTANT_ENCAPSED_STRING), 
 メニュー管理：
 ダッシュボード > 外観 > メニュー > [位置の管理] の選択を忘れるな！
 
+*******
+191010
+*******
+[6-1] トグル型のナビゲーションメニュー実装での js
+WordPressに標準で要されたjQueryを利用する場合、他のライブラリーとの競合を避けるため $ を jQuery と記述する。
+WordPressではテンプレートに<script>を記述してスクリプトを読み込むことは推奨されていない。読み込みたいスクリプトは wp_enqueue_script() で指定する。 
+WordPress は wp_enqueue_script() の指定に応じて、重複が発生しないようにスクリプトを調整し、 <?php wp_head(); ?> を通して必要な設定を出力する。
+
+wp_enqueue_script('navbar-script', get_template_directory_uri().'/navbtn.js', array('jquery));
+*****
+wp_enqueue_script()のパラメータ
+*****
+(1)ハンドル名：識別名
+(2)URL：スクリプトファイルのURL
+(3)依存関係：依存関係にあるスクリプトを array() の形で指定。ここではjQueryのハンドル名を "jquery" で指定。
+
+
+
+[6-3]
+クローラー(BOT)からのアクセスを判別する自作関数 is_bot() にて。
+stripos 関数：大文字小文字を区別せずに文字列が最初に現れる位置を探す
+strpos() の「大文字小文字を区別しない」版。
+
+[6-4]
+カスタムメニュー機能
+functions.php で、メニュー表示場所となる「ロケーション」の設定を追加。
+
+register_nav_menu('sitenav', 'サイトナビゲーション');
+register_nav_menu('pickupnav', 'おすすめ記事');
+
+pickupnavというロケーションを作成し、管理画面には「おすすめ記事」と表示するように指定。
+
+
