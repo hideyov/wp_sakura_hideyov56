@@ -137,3 +137,10 @@ register_sidebar(array(
 
 // research form - 検索フォーム
 add_theme_support('html5', array('search_form'));
+
+// header image - ヘッダー画像
+add_theme_support('custom-header', array(
+	'width' => 1000,
+	'height' => 300,
+	'header-text' => false
+));
