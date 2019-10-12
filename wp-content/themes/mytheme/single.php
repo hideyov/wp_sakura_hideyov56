@@ -56,13 +56,6 @@
 
 			<?php the_content(); ?>
 
-			<?php wp_link_pages( array(
-				'before' => '<div class="pagination"><ul><li>',
-				'separator' => '</li><li>',
-				'after' => '</li></ul></div>',
-				'pagelink' => '<span>%</span>'
-			)); ?>
-
 			<div class="share">
 				<ul>
 					<li><a href="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title().' - '.get_bloginfo('name')); ?>&amp;url=<?php echo urlencode(get_permalink()); ?>&amp;via=hideyovic_ge" onclick="window.open(this.href, 'SNS', 'width=500, height=300, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="share-tw">
@@ -74,6 +67,13 @@
 							Facebook<span> でシェア</span>
 						</a></li>
 				</ul>
+			</div>
+			
+			<div class="pagination-single">
+				<p>
+				<span class="oldpage"><?php previous_post_link(); ?></span>
+				<span class="newpage"><?php next_post_link(); ?></span>
+				</p>
 			</div>
 			
 			<?php if(has_category()) {
@@ -115,6 +115,7 @@
 			
 		</article>
 		<?php endwhile; endif; ?>
+		
 	</div><!-- .contents -->
 
 	<div class="sub">

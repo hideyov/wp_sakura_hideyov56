@@ -148,6 +148,12 @@ footer,
 	font-size: 0.875rem;
 }
 
+/*
+.copywight .description span {
+	font-size: 1.25rem;
+}
+*/
+
 /* ------ 記事の概要 ------ */
 
 /* 概要 excerpt */
@@ -652,6 +658,28 @@ footer,
 	.pagination-index li .dots {
 		border-right-color: #cccccc;
 	}
+}
+
+/* single pagination - 個別ページのページネーション */
+.pagination-single {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 0.8rem;
+}
+
+.pagination-single .oldpage {
+	float: left;
+	
+}
+
+.pagination-single .newpage {
+	float: right;
+}
+
+.pagination-single:after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 /* ------ side bar ------ */
