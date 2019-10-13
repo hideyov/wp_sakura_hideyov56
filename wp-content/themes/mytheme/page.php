@@ -82,11 +82,12 @@
 
 	<div class="sub">
 		<aside class="mymenu mymenu-page">
-			<h2>CONTENTS</h2>
+			<h2>PAGE CONTENTS</h2>
 			<?php wp_nav_menu(array(
 				'theme_location' => 'pagenav'
 			)); ?>
 		</aside>
+		<?php dynamic_sidebar('page_submenu'); ?>
 	</div>
 </div><!-- .container -->
 
