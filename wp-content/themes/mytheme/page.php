@@ -21,7 +21,7 @@
 <div class="container">
 	<div class="contents">
 		<?php if(have_posts()): while(have_posts()): the_post(); ?>
-		<article <?php post_class('kiji'); ?>>
+		<article class="page-article" <?php post_class('kiji'); ?>>
 
 			<div class="kiji-tag">
 				<?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>

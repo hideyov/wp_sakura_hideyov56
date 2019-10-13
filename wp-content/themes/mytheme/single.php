@@ -22,7 +22,7 @@
 <div class="container">
 	<div class="contents">
 		<?php if(have_posts()): while(have_posts()): the_post(); ?>
-		<article <?php post_class('kiji'); ?>>
+		<article class="single-article" <?php post_class('kiji'); ?>>
 
 			<div class="kiji-tag">
 				<?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
@@ -84,6 +84,8 @@
 				}
 			} ?>
 			 
+		</article>
+		
 			<?php
 			$myposts = get_posts( array(
 				'post_type' => 'post',
@@ -113,7 +115,6 @@
 			</aside>
 			<?php wp_reset_postdata(); endif; ?>
 			
-		</article>
 		<?php endwhile; endif; ?>
 		
 	</div><!-- .contents -->

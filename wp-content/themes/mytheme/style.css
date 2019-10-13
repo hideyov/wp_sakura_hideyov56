@@ -667,8 +667,8 @@ footer,
 
 /* single pagination - 個別ページのページネーション */
 .pagination-single {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 24px;
+	margin-bottom: 8px;
 	font-size: 0.8rem;
 }
 
@@ -1281,4 +1281,19 @@ iframe {
 /* ヘッダー画像上のテキスト - text on header image */
 .bounceInRight-delay {
 	animation-delay: 0.3s;
+}
+
+/* ====== 未分類 ====== */
+/* ------ 記事に背景色をつける試み ------ */
+.single-article,
+.category-article,
+.tag-article {
+	background-color: rgba(100,100,100,0.1);
+	padding: 12px;
+}
+
+.page-article {
+	background-color: rgba(100,100,100,0.1);
+	padding: 12px;
+	margin-top: 0;
 }
