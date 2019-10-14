@@ -1283,6 +1283,26 @@ iframe {
 	animation-delay: 0.3s;
 }
 
+/* ------ 404.php ------ */
+.not-found {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.not-found a {
+	display: inline-block;
+	background-color: #bc9a00;
+	color: #ededec;
+	margin-top: 16px;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+.not-found a:hover {
+	color: #cacaca;
+}
+
 /* ====== 未分類 ====== */
 /* ------ 記事に背景色をつける試み ------ */
 .single-article,
