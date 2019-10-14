@@ -1,0 +1,130 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Flicker Album Gallery\n"
+"POT-Creation-Date: 2018-09-13 00:20+0530\n"
+"PO-Revision-Date: 2018-09-13 00:20+0530\n"
+"Last-Translator: Weblizar <lizarweb@gmail.com>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: flickr-album-gallery-short-code.php:125
+msgid "Previous"
+msgstr ""
+
+#: flickr-album-gallery-short-code.php:128
+msgid "Next"
+msgstr ""
+
+#: flickr-album-gallery-short-code.php:148
+msgid "Sorry! Invalid Flickr Album Shortcode Embedded"
+msgstr ""
+
+#: flickr-album-gallery-widget.php:62
+msgid "Widget Title"
+msgstr ""
+
+#: flickr-album-gallery-widget.php:67
+msgid "Select Any"
+msgstr ""
+
+#: flickr-album-gallery-widget.php:86
+msgid "No Title"
+msgstr ""
+
+#: flickr-album-gallery.php:61 flickr-album-gallery.php:62
+msgid "Add New Gallery"
+msgstr ""
+
+#: flickr-album-gallery.php:63
+msgid "Edit Gallery"
+msgstr ""
+
+#: flickr-album-gallery.php:64
+msgid "New Album Gallery"
+msgstr ""
+
+#: flickr-album-gallery.php:65
+msgid "View Album Gallery"
+msgstr ""
+
+#: flickr-album-gallery.php:66
+msgid "Search Album Galleries"
+msgstr ""
+
+#: flickr-album-gallery.php:67
+msgid "No Album Galleries Found"
+msgstr ""
+
+#: flickr-album-gallery.php:68
+msgid "No Album Galleries Found in Trash"
+msgstr ""
+
+#: flickr-album-gallery.php:69
+msgid "Parent Album Gallery:"
+msgstr ""
+
+#: flickr-album-gallery.php:70
+msgid "All Album Galleries"
+msgstr ""
+
+#: flickr-album-gallery.php:101
+msgid "Gallery"
+msgstr ""
+
+#: flickr-album-gallery.php:102
+msgid "Album Gallery Shortcode"
+msgstr ""
+
+#: flickr-album-gallery.php:103
+msgid "Date"
+msgstr ""
+
+#: flickr-album-gallery.php:121
+msgid "Add Images"
+msgstr ""
+
+#: flickr-album-gallery.php:122
+msgid "Flickr Album Gallery Shortcode"
+msgstr ""
+
+#: flickr-album-gallery.php:172
+msgid ""
+"Use below shortcode in any Page/Post to publish your Flickr Album Gallery"
+msgstr ""
+
+#: flickr-album-gallery.php:245
+msgid "Enter Flickr API Key"
+msgstr ""
+
+#: flickr-album-gallery.php:246
+msgid "Get Your API Key"
+msgstr ""
+
+#: flickr-album-gallery.php:248
+msgid "Enter Flickr Album ID"
+msgstr ""
+
+#: flickr-album-gallery.php:249
+msgid "Get Your Album ID"
+msgstr ""
+
+#: flickr-album-gallery.php:252
+msgid "Show Gallery Title"
+msgstr ""
+
+#: flickr-album-gallery.php:257
+msgid "Custom Css"
+msgstr ""
+
+#: flickr-album-gallery.php:261
+msgid "Enter any custom css you want to apply."
+msgstr ""
