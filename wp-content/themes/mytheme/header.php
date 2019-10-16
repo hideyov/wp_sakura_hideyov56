@@ -50,7 +50,7 @@
 	<meta proterty="og:title" content="<?php bloginfo('name'); ?>">
 	<meta proterty="og:url" content="<?php home_url('/'); ?>">
 	<meta proterty="og:description" content="<?php bloginfo('description'); ?>">
-	<meta proterty="og:image" content="<?php echo get_template_directory_uri(); ?>/logo_googlefont_elite-4x.png">
+	<meta proterty="og:image" content="<?php echo get_template_directory_uri(); ?>/img/logo_googlefont_elite-4x.png">
 	<?php endif; // トップページ用のメタデータ、ここまで ?>
 
 	<?php if(is_category() || is_tag()): // カテゴリー・タグページ用のメタデータ ?>
@@ -76,7 +76,7 @@
 	<meta proterty="og:title" content="<?php single_term_title(); ?>に関する記事 | <?php bloginfo('name'); ?>">
 	<meta proterty="og:url" content="<?php echo get_term_link($termid, $taxname); ?>">
 	<meta proterty="og:description" content="<?php single_term_title(); ?>に関する記事の一覧です。">
-	<meta proterty="og:image" content="<?php echo get_template_directory_uri(); ?>/logo_googlefont_elite-4x.png">
+	<meta proterty="og:image" content="<?php echo get_template_directory_uri(); ?>/img/logo_googlefont_elite-4x.png">
 	<?php endif; // カテゴリー・タグページ用のメタデータ、ここまで ?>
 
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
@@ -97,7 +97,7 @@
 			<div class="site">
 				<h1>
 					<a href="<?php echo home_url(); ?>">
-						<img src="<?php echo get_template_directory_uri(); ?>/logo_googlefont_elite-4x.png" alt="<?php bloginfo('name'); ?>" width="160" height="30">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/logo_googlefont_elite-4x.png" alt="<?php bloginfo('name'); ?>" width="160" height="30">
 					</a>
 				</h1>
 			</div>

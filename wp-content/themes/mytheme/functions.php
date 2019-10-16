@@ -88,7 +88,7 @@ function mythumb($size) {
 //		$postthumb = wp_get_attachment_image_src($thumbid[1], $size);
 //		$url = $postthumb[0];
 	} else {
-		$url = get_template_directory_uri() . '/alt_image.png';
+		$url = get_template_directory_uri() . '/img/alt_image.png';
 	}
 	
 	return $url;
