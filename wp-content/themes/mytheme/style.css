@@ -758,7 +758,7 @@ footer,
 .mymenu-related {
 	margin: 40px 0 0;
 	padding: 20px;
-	border: solid 1px #dddddd;
+/*	border: solid 1px #dddddd;*/
 	background-color: #f6f6f6;
 }
 
@@ -1308,12 +1308,62 @@ iframe {
 .single-article,
 .category-article,
 .tag-article {
-	background-color: rgba(100,100,100,0.1);
+	background-color: rgba(0,100,255,0.3);
+/*	background-color: #00afe9;*/
 	padding: 12px;
 }
 
 .page-article {
-	background-color: rgba(100,100,100,0.1);
+	background-color: rgba(0,100,255,0.3);
+/*	background-color: #00afe9;*/
 	padding: 12px;
 	margin-top: 0;
+}
+
+#searchform,
+.mymenu-related {
+	background-color: rgba(0,100,255,0.3);
+}
+
+/* ------ ヘッダー背景色を変える試み ------ */
+header,
+footer {
+	background-color: #000033;
+}
+
+header .sitenav a {
+	color: #bcbcbc;
+}
+
+header .sitenav a:hover {
+	background-color: #000033;
+	color: #eeeeee;
+	transform: scale(1.05);
+}
+
+footer .copyright {
+	color: #bcbcbc;
+}
+
+body {
+	background-color: #0099e1;
+}
+
+/* ------ 見出し色を統一する試み ------ */
+.single-article h1, 
+.category-article h1, 
+.tag-article h1, 
+.mymenu-related h2 {
+	color: #66f3fc;
+}
+
+/* ------ 記事の文字 ------ */
+.contents p {
+	color: #cccccc;
+}
+
+.kiji-date,
+.bread li a, 
+.bread li::after {
+	color: #cacaca;
 }
