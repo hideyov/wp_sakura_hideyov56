@@ -674,11 +674,14 @@ footer,
 
 .pagination-single .oldpage {
 	float: left;
-	
 }
 
 .pagination-single .newpage {
 	float: right;
+}
+
+.pagination-single a {
+	text-decoration: none;
 }
 
 .pagination-single:after {
@@ -1308,21 +1311,19 @@ iframe {
 .single-article,
 .category-article,
 .tag-article {
-	background-color: rgba(0,100,255,0.3);
-/*	background-color: #00afe9;*/
+/*	background-color: rgba(0,100,255,0.3);*/
 	padding: 12px;
 }
 
 .page-article {
-	background-color: rgba(0,100,255,0.3);
-/*	background-color: #00afe9;*/
+/*	background-color: rgba(0,100,255,0.3);*/
 	padding: 12px;
 	margin-top: 0;
 }
 
 #searchform,
 .mymenu-related {
-	background-color: rgba(0,100,255,0.3);
+/*	background-color: rgba(0,100,255,0.3);*/
 }
 
 /* ------ ヘッダー背景色を変える試み ------ */
@@ -1346,7 +1347,7 @@ footer .copyright {
 }
 
 body {
-	background-color: #0099e1;
+/*	background-color: #0099e1;*/
 }
 
 /* ------ 見出し色を統一する試み ------ */
@@ -1354,16 +1355,23 @@ body {
 .category-article h1, 
 .tag-article h1, 
 .mymenu-related h2 {
-	color: #66f3fc;
+/*	color: #66f3fc;*/
 }
 
 /* ------ 記事の文字 ------ */
 .contents p {
-	color: #cccccc;
+/*	color: #cccccc;*/
 }
 
 .kiji-date,
 .bread li a, 
 .bread li::after {
-	color: #cacaca;
+/*	color: #cacaca;*/
+}
+
+/* clear both の汎用クラスの試み */
+.clearboth {
+	content: "";
+	display: block;
+	clear: both;
 }
