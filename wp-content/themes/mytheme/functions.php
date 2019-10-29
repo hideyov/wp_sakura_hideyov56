@@ -127,7 +127,7 @@ function is_bot() {
 	return false;
 }
 
-// eidget area - ウィジェットエリア
+// widget area - ウィジェットエリア
 register_sidebar(array(
 	'id' => 'submenu',
 	'name' => 'サブメニュー',
