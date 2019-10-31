@@ -1,0 +1,59 @@
+web-固定ページ(job-固定ページ、music-固定ページ)作成
+
+固定ページを、web/job/musicの各内容ごとに作成し、それぞれのピックアップ記事を表示させたい。
+各テーマのピックアップ記事は、ダッシュボード上で選択できるようにする。その手順をメモしておく。
+
+<h2>カスタムメニューを追加</h2>
+
+functions.phpでカスタムメニュー追加を指定する。
+
+register_nav_menu('pickupnav_web', 'web ピックアップ記事');
+
+
+page-web_submenu というid でサイドバーを登録 [!! この手順は結局不要だった!!]
+
+
+register_sidebar(array(
+	'id' => 'page-web_submenu',
+	'name' => 'web-固定ページサブメニュー',
+	'description' => 'web-固定ページのサブメニューに表示するウィジェットを指定。',
+	'before_widget' => '<aside id="%1$s" class="mymenu widget %2$s">',
+	'after_widget' => '</aside>',
+	'before_title' => '<h2 class="widgettitle">',
+	'after_title' => '</h2>'
+));
+
+[!! ここまでは不要な手順 !!]
+
+<h2>sidebar-web.phpを作成
+sidebar.phpを元に作成し、location_name を pickupnavから 'pickupnav_web'に、’こだわり記事'を'web関連記事'か何かに変更。
+
+<h2>page-web.php作成</h2>
+page-web.php を、page.phpを元に作成
+
+冒頭で下記の5行を宣言する。これは必須。これにより、記事編集時にテンプレート選択ができるようになる。
+
+<?php
+/*
+Template Name: page-web.php
+*/
+?>
+
+div.sub で sisebar-webを呼び出し
+
+<?php get_sidebar('web'); ?>
+
+テンプレート階層の仕組みで、各テンプレートが読み込まれるので、page-toppage.php は編集の必要なし。
+
+各メニューの編集は 外観 > メニュー から行う。
+
+<h2>エラー？？</h2>
+
+web固定ページ、job固定ページまでは上記の手順で順調にいったが、同じ手順でやったつもりが、music固定ページでは下記エラーが出た。
+
+Notice: Undefined index: pickupnav_music in /home/hideyov/www/blog/wp-content/themes/mytheme/sidebar-music.php on line 4
+
+結局、ダッシュボードの「メニュー > 位置の管理」で、「テーマの位置」と「指定されたメニュー」が合致してなかっただけでした。
+
+
+
