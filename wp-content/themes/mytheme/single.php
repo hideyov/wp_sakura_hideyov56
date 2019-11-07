@@ -50,7 +50,7 @@
 
 			<?php if(has_post_thumbnail() && $page == 1): ?>
 			<div class="catch">
-				<?php the_post_thumbnail('large'); ?>
+				<?php the_post_thumbnail('medium'); ?>
 			</div>
 			<?php endif; ?>
 

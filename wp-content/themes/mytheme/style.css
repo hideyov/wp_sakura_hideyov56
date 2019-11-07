@@ -1329,6 +1329,12 @@ iframe {
 /*	background-color: rgba(0,100,255,0.3);*/
 }
 
+/* ------ preformatted code 整形済みコード ------ */
+
+.preformatted_code {
+  overflow: auto;
+}
+
 /* ------ ヘッダー背景色を変える試み ------ */
 header,
 footer {
