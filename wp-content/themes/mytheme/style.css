@@ -20,6 +20,10 @@ body {
 	line-height: 1.5;
 }
 
+* {
+	color: #0093e6;
+}
+
 /* ------- Basic Structure 基本構造 ------ */
 
 /* header と footer をバーの形に */
@@ -1405,4 +1409,8 @@ h2,
 h2.widgettitle,
 .mymenu h2 {
 	color: #00a6f0;
+}
+
+article {
+	background-color: #f3f3f3;
 }
