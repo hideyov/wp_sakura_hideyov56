@@ -114,7 +114,7 @@ footer,
 .site h1 a {
 	display: inline-block;
 	padding: 10px;
-	background-color: #00a0e9;
+	background-color: #00a6f0;
 	color: #ffffff;
 	text-decoration: none;
 }
@@ -323,8 +323,9 @@ footer,
 	margin-top: 40px;
 	padding-left: 8px;
 	padding-bottom: 5px;
-	border-bottom: solid 2px #00a0e9;
-	border-left: solid 6px #00a0e9;
+	color: #0093c0;
+	border-bottom: solid 2px #00a6f0;
+	border-left: solid 6px #00a6f0;
 	font-size: 1.5rem;
 	clear: both;
 }
@@ -335,7 +336,7 @@ footer,
 	left: 0px;
 	top: 3px;
 	content: '\f14a';
-	color: #00a0e9;
+	color: #00a6f0;
 	font-family: 'FontAwesome';
 	font-size: 1.75rem;
 	line-height: 1;
@@ -702,7 +703,9 @@ footer,
 .mymenu h2 {
 	margin-top: 0;
 	margin-bottom: 10px;
-	border-bottom: solid 2px #dddddd;
+	padding-left: 6px;
+	border-bottom: solid 2px #00a6f0;
+	border-left: solid 4px #00a6f0;
 	color: #666666;
 	font-size: 1.1rem;
 }
@@ -759,7 +762,7 @@ footer,
 }
 
 /* 関連記事メニュー */
-.mymenu-related {
+4mymenu-related {
 	margin: 40px 0 0;
 	padding: 20px;
 /*	border: solid 1px #dddddd;*/
@@ -1131,7 +1134,7 @@ iframe {
 	color: #000000;
 	text-decoration: none;
 	font-family: 'Special Elite', sans-serif;
-	font-size: 1.1rem;
+	font-size: 1.25rem;
 }
 
 .mainmenu li a:hover {
@@ -1172,25 +1175,6 @@ iframe {
 	text-indent: -9999px;
 }
 
-@media (min-width: 768px) {
-	/* サイト名とナビゲーションメニューを横に並べる */
-	.header-inner:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-	
-	.site {
-		float: left;
-		width: auto;
-	}
-	
-	.sitenav {
-		float: right;
-		width: auto;
-		margin-top: 10px;
-	}
-	
 	/* ナビゲーションメニューのリンクを横に並べる */
 	#mainmenu {
 		display: block !important
@@ -1212,36 +1196,64 @@ iframe {
 	}
 	
 	.mainmenu li a {
-		padding: 10px 15px;
+		padding: 10px 20px 15px 15px;
 	}
-	
+
+	.mainmenu li a:first-child {
+		padding-left: 5px;
+	}
+
 	/* toggle button */
 	#navbtn {
 		display: none;
 	}
+	
+
+@media (min-width: 768px) {
+	/* サイト名とナビゲーションメニューを横に並べる */
+	.header-inner:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	
+	.site {
+		float: left;
+		width: auto;
+	}
+	
+	.sitenav {
+		float: right;
+		width: auto;
+		margin-top: 10px;
+	}
+	
 }
 
 /* ------ page - 固定ページ ------ */
 
 /* page menu - ocntents menu - コンテンツメニュー */
 .mymenu-page  {
-	border: solid 2px #dddddd;
+/*	border: solid 2px #dddddd;*/
 }
 
 .mymenu-page h2 {
 	margin: 0;
-	padding: 10px;
+	padding: 6px 10px;
+	font-family: 'Special Elite', sans-serif;
 	font-size: 1rem;
 }
 
 .mymenu-page li a {
-	padding: 13px 10px;
-	border-bottom: solid 1px #dddddd;
+	padding: 10px 10px;
+	border-bottom: solid 1px #00a6f0;
 }
 
+/*
 .mymenu-page li:last-child a {
 	border: none;
 }
+*/
 
 /* header image - ヘッダー画像 */
 .hero {
@@ -1337,13 +1349,12 @@ footer {
 }
 
 header .sitenav a {
-	color: #bcbcbc;
+	color: #00a6f0;
 }
 
 header .sitenav a:hover {
+	color: #00e6ff;
 	background-color: #000033;
-	color: #eeeeee;
-/*	transform: scale(1.05);*/
 }
 
 footer .copyright {
@@ -1378,4 +1389,20 @@ body {
 	content: "";
 	display: block;
 	clear: both;
+}
+
+/* tagページとcategoryページのarticleの上を詰める */
+article.tag-article,
+article.category-article {
+	margin-top: -24px;
+}
+
+h1 {
+	color: #00a6f0;
+}
+
+h2,
+h2.widgettitle,
+.mymenu h2 {
+	color: #00a6f0;
 }
