@@ -123,18 +123,16 @@ footer,
 	text-decoration: none;
 }
 
+/*
 .site h1 a img {
 	display: inline-block;
 	margin-top: 10px;
 }
+*/
 
 .site h1 {
 	margin: 0;
-/*
-	font-family: 'Mansalva', cursive;
-	font-family: 'Gloria Hallelujah', cursive;
 	font-family: 'Special Elite', cursive;
-*/
 	font-size: 1.8rem;
 }
 

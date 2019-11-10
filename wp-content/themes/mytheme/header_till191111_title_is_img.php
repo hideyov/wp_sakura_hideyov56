@@ -97,7 +97,7 @@
 			<div class="site">
 				<h1>
 					<a href="<?php echo home_url(); ?>">
-						hideyov7
+						<img src="<?php echo get_template_directory_uri(); ?>/img/logo_googlefont_elite-4x.png" alt="<?php bloginfo('name'); ?>" width="160" height="30">
 					</a>
 				</h1>
 			</div>
