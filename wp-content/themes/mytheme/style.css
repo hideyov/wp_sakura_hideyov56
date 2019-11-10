@@ -133,7 +133,7 @@ footer,
 .site h1 {
 	margin: 0;
 	font-family: 'Special Elite', cursive;
-	font-size: 1.8rem;
+	font-size: 2rem;
 }
 
 /* ------ Footer ------ */
@@ -707,8 +707,8 @@ footer,
 	margin-bottom: 10px;
 	padding-left: 6px;
 	border-bottom: solid 2px #00a6f0;
-	border-left: solid 4px #00a6f0;
-	color: #666666;
+	border-left: solid 6px #00a6f0;
+/*	color: #666666;*/
 	font-size: 1.1rem;
 }
 
@@ -1247,8 +1247,10 @@ iframe {
 }
 
 .mymenu-page li a {
-	padding: 10px 10px;
-	border-bottom: solid 1px #00a6f0;
+	padding: 0 10px 0 10px;
+/*	border-bottom: solid 1px #00a6f0;*/
+	border-left: solid 6px #00c6ff;
+	margin: 12px 0 10px 10px;
 }
 
 /*
@@ -1393,10 +1395,10 @@ body {
 	clear: both;
 }
 
-/* tagページとcategoryページのarticleの上を詰める */
-article.tag-article,
-article.category-article {
-	margin-top: -24px;
+/* tagページとcategoryページのh1の上を詰める */
+.tag-article h1,
+.category-article h1 {
+	margin-top: 8px;
 }
 
 h1 {

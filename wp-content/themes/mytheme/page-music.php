@@ -76,7 +76,7 @@ Template Name: page-music.php
 	<div class="sub">
 		<?php get_sidebar('music'); ?>
 		<aside class="mymenu mymenu-page">
-			<h2>hideyov56</h2>
+			<h2>hideyov7</h2>
 			<?php wp_nav_menu(array(
 				'theme_location' => 'pagenav'
 			)); ?>
