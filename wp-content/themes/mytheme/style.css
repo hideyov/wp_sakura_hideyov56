@@ -18,8 +18,7 @@ body {
 	margin: 0;
 	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
 	line-height: 1.5;
-	background-color: #ffffe3;
-	background-color: #ecffff;
+	background-color: #daffff;
 }
 
 * {
@@ -27,18 +26,6 @@ body {
 }
 
 /* ------- Basic Structure 基本構造 ------ */
-
-/* header と footer をバーの形に */
-header {
-/*
-	border-bottom: solid 1px #dddddd;
-	background-color: #f6f6f6;
-*/
-}
-
-footer {
-	border-top: solid 1px #dddddd;
-}
 
 /* Box ボックスの上下間隔 */
 .sub-header {
@@ -123,7 +110,7 @@ footer,
 	display: inline-block;
 	padding: 10px;
 	background-color: #0096e0;
-	color: #ffffe3;
+	color: #ffffff;
 	text-decoration: none;
 	margin: 0;
 	font-family: 'Kanit', sans-serif;
@@ -172,13 +159,13 @@ footer,
 .gaiyou a {
 	display: block;
 	padding: 20px 0;
-	border-bottom: dotted 2px #dddddd;
+	border-bottom: dotted 2px #0093e6;
 	color: #000000;
 	text-decoration: none;
 }
 
 .gaiyou a:hover {
-	background-color: #eeeeee;
+	background-color: #ffffdf;
 }
 
 .gaiyou a:after {
@@ -240,7 +227,7 @@ footer,
 .gaiyou-large a {
 	display: block;
 	padding: 20px 0;
-	border-bottom: dotted 2px #dddddd;
+	border-bottom: dotted 2px #0093e6;
 	color: #000000;
 	text-decoration: none;
 }
@@ -250,7 +237,7 @@ footer,
 }
 
 .gaiyou-large a:hover {
-	background-color: #eeeeee;
+	background-color: #ffffdf;
 }
 
 .gaiyou-large h1 {
@@ -500,7 +487,7 @@ footer,
 }
 
 .bread li a[href]:hover {
-	background-color: #eeeeee;
+	background-color: #ffffdf;
 }
 
 .bread ol:after {
@@ -623,18 +610,17 @@ i.fab.fa-facebook::before {
 	display: block;
 	margin: 0 5px;
 	padding: 6px 8px;
-	border: solid 1px #cccccc;
-	color: #000000;
+	background-color: #aaefac;
+	border-radius: 5px;
+/*	border: solid 1px #cccccc;*/
+	color: #0093e6;
 	font-size: 0.825rem;
 	text-decoration: none;
 }
 
-.pagination li > span {
-	background-color: #efefef;
-}
-
-.pagination li a:hover {
-	background-color: #eeeeee;
+.pagination li a:hover,
+.pagination li >span:hover {
+	background-color: #ffffdf;
 }
 
 .pagination ul:after {
@@ -679,7 +665,7 @@ i.fab.fa-facebook::before {
 .pagination-single {
 	margin-top: 24px;
 	margin-bottom: 8px;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 }
 
 .pagination-single .oldpage {
@@ -691,13 +677,33 @@ i.fab.fa-facebook::before {
 }
 
 .pagination-single a {
+	display: inline-block;
+	padding: 0 6px;
+	border-radius: 5px;
 	text-decoration: none;
+	background-color: #daffcc;
+}
+
+.pagination-single a:hover {
+	background-color: #ffffdf;
 }
 
 .pagination-single:after {
 	content: "";
 	display: block;
 	clear: both;
+}
+
+.page-numbers.current,
+.page-numbers.current:hover {
+	background-color: #ddd;
+	cursor: default;
+}
+
+.post-page-numbers.current,
+.post-page-numbers.current:hover {
+	background-color: #ddd;
+	cursor: default;
 }
 
 /* ------ side bar ------ */
@@ -733,13 +739,13 @@ i.fab.fa-facebook::before {
 }
 
 .mymenu li a:hover {
-	background-color: #eeeeee;
+	background-color: #ffffdf;
 }
 
 /* サムネイル画像を付けたメニューのデザイン */
 .mymenu-thumb li a {
 	padding: 5px 0;
-	border-bottom: dotted 1px #dddddd;
+	border-bottom: dotted 1px #0093e6;
 	color: #2288bb;
 }
 
@@ -960,7 +966,7 @@ i.fab.fa-facebook::before {
 }
 
 .mymenu-top li h2 {
-	margin: 10px 0 5px;
+	margin: 6px 0 5px -6px;
 	border: none;
 	font-size: 1.25rem;
 }
@@ -968,6 +974,21 @@ i.fab.fa-facebook::before {
 .mymenu-top li p {
 	margin: 0;
 	font-size: 0.875rem;
+}
+
+@media (max-width: 599px) {
+	.mymenu-top li h2 {
+		position: absolute;
+		top: 45px;
+		left: 0;
+		margin-left: 0;
+		padding: 0 8px 0 0;
+		background-color: #daffff;
+	}
+	
+	.mymenu-top .text p {
+		margin-top: 4px;
+	}
 }
 
 @media (min-width: 600px) {
@@ -998,7 +1019,7 @@ i.fab.fa-facebook::before {
 /* トップページの「最近の投稿」メニュー - recent article menu */
 .mymenu-news {
 	padding: 20px;
-	border: solid 1px #dddddd;
+	border: solid 1px #0093e6;
 }
 
 .mymenu-news ul {
@@ -1015,9 +1036,13 @@ i.fab.fa-facebook::before {
 	left: 0px;
 	top: 12px;
 	content: '\f138';
-	color: #aaaaaa;
+	color: #0093e6;
 	font-family: 'FontAwesome';
 	line-height: 1;
+}
+
+.mymenu-news li a {
+	color: #0093e6;
 }
 
 /* header image - ヘッダー画像 */
@@ -1164,39 +1189,13 @@ iframe {
 }
 
 .mainmenu li a:hover {
-	background-color: #eeeeee;
+	background-color: #ffffdf;
 }
 
 /* toggle button - トグルボタン */
 .header-inner {
 	position: relative;
 }
-
-/*
-#navbtn {
-	position: absolute;
-	top: 15px;
-	right: 0;
-	padding: 6px 12px;
-	border: solid 1px #aaaaaa;
-	border-radius: 5px;
-	background-color: #ffffff;
-	cursor: pointer;
-}
-
-#navbtn:hover {
-	background-color: #dddddd;
-}
-
-#navbtn:focus {
-	outline: none;
-}
-
-#navbtn i {
-	color: #888888;
-	font-size: 1.125rem;
-}
-*/
 
 #navbtn span {
 	display: inline-block;
@@ -1257,9 +1256,6 @@ iframe {
 /* ------ page - 固定ページ ------ */
 
 /* page menu - ocntents menu - コンテンツメニュー */
-.mymenu-page {
-	/*	border: solid 2px #dddddd;*/
-}
 
 .mymenu-page h2 {
 	margin: 0;
@@ -1467,5 +1463,6 @@ h2.widgettitle,
 
 article,
 .mymenu-related {
-	background-color: #ffffec;
+	background-color: #ffffff;
 }
+

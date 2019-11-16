@@ -55,6 +55,13 @@
 			<?php endif; ?>
 
 			<?php the_content(); ?>
+			
+			<?php wp_link_pages( array(
+				'before' => '<div class="pagination"><ul><li>',
+				'separator' => '</li><li>',
+				'after' => '</li></ul></div>',
+				'pagelink' => '<span>%</span>'
+			)); ?>
 
 			<div class="share">
 				<ul>
