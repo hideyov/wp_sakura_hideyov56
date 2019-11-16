@@ -159,7 +159,7 @@ footer,
 .gaiyou a {
 	display: block;
 	padding: 20px 0;
-	border-bottom: dotted 2px #0093e6;
+	border-bottom: dotted 2px #00c6ff;
 	color: #000000;
 	text-decoration: none;
 }
@@ -227,7 +227,7 @@ footer,
 .gaiyou-large a {
 	display: block;
 	padding: 20px 0;
-	border-bottom: dotted 2px #0093e6;
+	border-bottom: dotted 2px #00c6ff;
 	color: #000000;
 	text-decoration: none;
 }
@@ -608,7 +608,7 @@ i.fab.fa-facebook::before {
 .pagination li a,
 .pagination li > span {
 	display: block;
-	margin: 0 5px;
+	margin: 0 6px;
 	padding: 6px 8px;
 	background-color: #aaefac;
 	border-radius: 5px;
@@ -620,7 +620,7 @@ i.fab.fa-facebook::before {
 
 .pagination li a:hover,
 .pagination li >span:hover {
-	background-color: #ffffdf;
+	background-color: #eded7f;
 }
 
 .pagination ul:after {
@@ -646,7 +646,8 @@ i.fab.fa-facebook::before {
 	.pagination-index li a,
 	.pagination-index li > span {
 		margin: 0;
-		padding: 6px 7px;
+		padding: 6px 8px;
+		margin: 0 6px;
 		border-left: none;
 		font-size: 0.75rem;
 	}
@@ -678,14 +679,17 @@ i.fab.fa-facebook::before {
 
 .pagination-single a {
 	display: inline-block;
-	padding: 0 6px;
+	padding: 2px 6px;
+	margin-top: 2px;
+	margin-bottom: 6px;
 	border-radius: 5px;
 	text-decoration: none;
-	background-color: #daffcc;
+	background-color: #aaefac;
 }
 
 .pagination-single a:hover {
 	background-color: #ffffdf;
+	background-color: #eded7f;
 }
 
 .pagination-single:after {
@@ -745,7 +749,7 @@ i.fab.fa-facebook::before {
 /* サムネイル画像を付けたメニューのデザイン */
 .mymenu-thumb li a {
 	padding: 5px 0;
-	border-bottom: dotted 1px #0093e6;
+	border-bottom: dotted 2px #00c6ff;
 	color: #2288bb;
 }
 
@@ -979,11 +983,13 @@ i.fab.fa-facebook::before {
 @media (max-width: 599px) {
 	.mymenu-top li h2 {
 		position: absolute;
-		top: 45px;
-		left: 0;
-		margin-left: 0;
-		padding: 0 8px 0 0;
-		background-color: #daffff;
+		top: 50px;
+		left: 16px;
+/*		margin-left: 6px;*/
+		padding: 0 8px 0 8px;
+		color: #daffff;
+		background-color: #0096ed;
+		box-shadow: 2px 1px 0 rgba(255,255,255,0.6);
 	}
 	
 	.mymenu-top .text p {
@@ -1294,21 +1300,6 @@ iframe {
 	background-position: 50% 50%
 }
 
-/*
-@media (max-width: 767px) {
-	.hero-img {
-		height: 160px;
-	}
-}
-
-@media (max-width: 559px) {
-	.hero-img {
-		height: 60px;
-		background-size: contain;
-	}
-}
-*/
-
 .hero-text {
 	position: absolute;
 	top: 150px;
@@ -1387,11 +1378,6 @@ iframe {
 
 .page-article h1 {
 	margin-top: -30px;
-}
-
-#searchform,
-.mymenu-related {
-	/*	background-color: rgba(0,100,255,0.3);*/
 }
 
 /* ------ ヘッダー背景色を変える試み ------ */
