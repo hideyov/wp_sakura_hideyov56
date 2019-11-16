@@ -118,15 +118,6 @@ footer,
 	font-size: 2rem;
 }
 
-.site h1 {
-/*
-	margin: 0;
-	font-family: 'Kanit', sans-serif;
-	font-style: italic;
-	font-size: 2rem;
-*/
-}
-
 /* ------ Footer ------ */
 /* description */
 .copyright {
@@ -330,6 +321,8 @@ footer,
 	}
 }
 
+/****** style format - スタイルフォーマット ******/
+
 /* 補足情報 */
 .point {
 	position: relative;
@@ -341,7 +334,7 @@ footer,
 	clear: both;
 }
 
-.point:before {
+.point::before {
 	position: absolute;
 	left: 18px;
 	top: -8px;
@@ -362,7 +355,7 @@ footer,
 	text-align: center;
 }
 
-.point:after {
+.point::after {
 	position: absolute;
 	left: 30px;
 	top: -8px;
@@ -389,7 +382,7 @@ footer,
 	clear: both;
 }
 
-.attention:before {
+.attention::before {
 	position: absolute;
 	left: 20px;
 	top: -12px;
@@ -399,6 +392,12 @@ footer,
 	font-family: 'FontAwesome';
 	font-size: 1.2rem;
 	line-height: 1;
+}
+
+/* ピックアップ */
+.pickup {
+	background-color: #bfffe5;
+	padding: 8px 12px;
 }
 
 /* ハイライト highlight */
@@ -446,18 +445,16 @@ footer,
 	display: block;
 	margin-right: 5px;
 	margin-bottom: 2px;
-	padding: 3px 5px;
+	padding: 1px 5px;
 	border-radius: 2px;
-/*	background-color: #75dbe7;*/
-	background-color: #34acac;
+	background-color: #3fcda7;
 	color: #ffffff;
 	font-size: 0.8rem;
 	text-decoration: none;
 }
 
 .kiji-tag li a:hover {
-/*	background-color: #94ecf6;*/
-	background-color: #0096e0;
+	background-color: #dadd6f;
 }
 
 .kiji-tag ul:after {
@@ -610,16 +607,15 @@ i.fab.fa-facebook::before {
 	display: block;
 	margin: 0 6px;
 	padding: 6px 8px;
-	background-color: #aaefac;
+	background-color: #cfedb7;
 	border-radius: 5px;
-/*	border: solid 1px #cccccc;*/
 	color: #0093e6;
 	font-size: 0.825rem;
 	text-decoration: none;
 }
 
 .pagination li a:hover,
-.pagination li >span:hover {
+.pagination li > span:hover {
 	background-color: #eded7f;
 }
 
@@ -684,11 +680,10 @@ i.fab.fa-facebook::before {
 	margin-bottom: 6px;
 	border-radius: 5px;
 	text-decoration: none;
-	background-color: #aaefac;
+	background-color: #cfedb7;
 }
 
 .pagination-single a:hover {
-	background-color: #ffffdf;
 	background-color: #eded7f;
 }
 
@@ -698,17 +693,20 @@ i.fab.fa-facebook::before {
 	clear: both;
 }
 
+.post-page-numbers.current,
+.post-page-numbers.current:hover,
 .page-numbers.current,
 .page-numbers.current:hover {
-	background-color: #ddd;
+	background-color: #00c6ff;
 	cursor: default;
+}
+.post-page-numbers.current span,
+.post-page-numbers.current:hover span,
+.page-numbers.current,
+.page-numbers.current:hover {
+	color: #ffffff;
 }
 
-.post-page-numbers.current,
-.post-page-numbers.current:hover {
-	background-color: #ddd;
-	cursor: default;
-}
 
 /* ------ side bar ------ */
 
@@ -798,7 +796,7 @@ i.fab.fa-facebook::before {
 	font-weight: normal;
 }
 
-.mymenu-related h2:before {
+.mymenu-related h2::before {
 	content: none;
 }
 
@@ -985,13 +983,13 @@ i.fab.fa-facebook::before {
 		position: absolute;
 		top: 50px;
 		left: 16px;
-/*		margin-left: 6px;*/
+		/*		margin-left: 6px;*/
 		padding: 0 8px 0 8px;
 		color: #daffff;
 		background-color: #0096ed;
-		box-shadow: 2px 1px 0 rgba(255,255,255,0.6);
+		box-shadow: 2px 1px 0 rgba(255, 255, 255, 0.6);
 	}
-	
+
 	.mymenu-top .text p {
 		margin-top: 4px;
 	}
@@ -1037,7 +1035,7 @@ i.fab.fa-facebook::before {
 	padding-left: 20px;
 }
 
-.mymenu-news li:before {
+.mymenu-news li::before {
 	position: absolute;
 	left: 0px;
 	top: 12px;
@@ -1256,7 +1254,7 @@ iframe {
 		float: right;
 		width: auto;
 	}
-	
+
 }
 
 /* ------ page - 固定ページ ------ */
@@ -1266,7 +1264,6 @@ iframe {
 .mymenu-page h2 {
 	margin: 0;
 	padding: 2px 0 4px 10px;
-	/*	font-family: 'Special Elite', sans-serif;*/
 	font-family: 'Kanit', sans-serif;
 	font-style: italic;
 	font-size: 1.2rem;
@@ -1275,7 +1272,6 @@ iframe {
 .mymenu-page li a {
 	padding: 0 10px 0 10px;
 	color: #0096e0;
-	/*	border-bottom: solid 1px #0096e0;*/
 	border-left: solid 6px #00c6ff;
 	margin: 12px 0 10px 10px;
 }
@@ -1365,13 +1361,12 @@ iframe {
 /* ------ 記事に背景色をつける試み ------ */
 .single-article,
 .category-article,
-.tag-article {
-	/*	background-color: rgba(0,100,255,0.3);*/
+.tag-article,
+.search-article {
 	padding: 12px;
 }
 
 .page-article {
-	/*	background-color: rgba(0,100,255,0.3);*/
 	padding: 12px;
 	margin-top: 0;
 }
@@ -1387,8 +1382,8 @@ footer {
 }
 
 header sitenav a {
-/*	color: #0096e0;*/
-/*	color: #00a9d3;*/
+	/*	color: #0096e0;*/
+	/*	color: #00a9d3;*/
 }
 
 header .sitenav a:hover {
@@ -1397,31 +1392,7 @@ header .sitenav a:hover {
 }
 
 footer {
-/*	color: #bcbcbc;*/
 	color: #00a9d3;
-}
-
-body {
-	/*	background-color: #0099e1;*/
-}
-
-/* ------ 見出し色を統一する試み ------ */
-.single-article h1,
-.category-article h1,
-.tag-article h1,
-.mymenu-related h2 {
-	/*	color: #66f3fc;*/
-}
-
-/* ------ 記事の文字 ------ */
-.contents p {
-	/*	color: #cccccc;*/
-}
-
-.kiji-date,
-.bread li a,
-.bread li::after {
-	/*	color: #cacaca;*/
 }
 
 /* clear both の汎用クラスの試み */
@@ -1431,9 +1402,10 @@ body {
 	clear: both;
 }
 
-/* tagページとcategoryページのh1の上を詰める */
+/* tagページとcategoryページと検索結果ページのh1の上を詰める */
 .tag-article h1,
-.category-article h1 {
+.category-article h1,
+.search-article h1 {
 	margin-top: 8px;
 }
 
@@ -1451,4 +1423,3 @@ article,
 .mymenu-related {
 	background-color: #ffffff;
 }
-

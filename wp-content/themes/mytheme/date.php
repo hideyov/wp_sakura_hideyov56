@@ -16,24 +16,25 @@
 
 <div class="container">
 	<div class="contents">
-		<article class="search-article">
-
-			<h1>"<?php echo get_search_query(); ?>" に一致した記事</h1>
-
-			<?php if(have_posts()): while(have_posts()): the_post(); ?>
-
-			<?php get_template_part('overview', 'medium'); ?>
-
-			<?php endwhile; endif; ?>
+		
+		<article class="tag-article">
+			
+		<h1><?php the_time('Y年m月'); ?>の記事</h1>
+		
+		<?php if(have_posts()): while(have_posts()): the_post(); ?>
+		
+		<?php get_template_part('overview', 'medium'); ?>	
+		
+		<?php endwhile; endif; ?>
 		</article>
-
-			<div class="pagination pagination-index">
-				<?php echo paginate_links(array(
+		
+		<div class="pagination pagination-index">
+			<?php echo paginate_links(array(
 				'type' => 'list',
 				'prev_text' => '&laquo;',
 				'next_text' => '&raquo;'
 			)); ?>
-			</div>
+		</div>
 	</div><!-- .contents -->
 
 	<div class="sub">

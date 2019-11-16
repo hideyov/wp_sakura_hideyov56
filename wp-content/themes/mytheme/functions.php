@@ -59,6 +59,11 @@ function editor_setting($init) {
 			'classes' => 'highlight'
 		),
 		array(
+			'title' => 'ピックアップ',
+			'block' => 'div',
+			'classes' => 'pickup'
+		),
+		array(
 			'title' => '整形済みコード',
 			'block' => 'pre',
 			'classes' => 'preformatted_code'
