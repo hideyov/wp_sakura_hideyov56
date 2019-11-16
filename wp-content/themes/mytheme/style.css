@@ -1291,32 +1291,59 @@ iframe {
 
 .hero-img {
 	width: 100%;
-	height: 300px;
+	height: 240px;
 	margin: 20px 0 10px;
 	background-color: #dddddd;
 	background-size: cover;
 	background-position: 50% 50%
 }
 
+/*
+@media (max-width: 767px) {
+	.hero-img {
+		height: 160px;
+	}
+}
+
+@media (max-width: 559px) {
+	.hero-img {
+		height: 60px;
+		background-size: contain;
+	}
+}
+*/
+
 .hero-text {
 	position: absolute;
-	top: 60px;
-	right: 135px;
+	top: 150px;
+	right: 72px;
 	color: rgba(0, 255, 255, 0.8);
 	font-family: 'Kanit', sans-serif;
 	font-size: 2.2rem;
 	text-shadow: 1px 1px 0 #000000;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 767px) {
 	.hero-img {
-		height: 200px;
+		height: 160px;
 	}
 
 	.hero-text {
-		top: 30px;
-		right: 20px;
-		font-size: 1.4rem;
+		top: 90px;
+		right: 54px;
+		font-size: 1.7rem;
+	}
+}
+
+@media (max-width: 599px) {
+	.hero-img {
+		height: 120px;
+	}
+
+	.hero-text {
+		top: 64px;
+		right: 32px;
+		font-size: 1.5rem;
 	}
 }
 
