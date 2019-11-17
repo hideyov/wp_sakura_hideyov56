@@ -426,7 +426,7 @@ footer,
 
 @media (max-width: 599px) {
 	.kiji-date {
-		font-size: 0.67px;
+		/*		font-size: 0.67px;*/
 	}
 }
 
@@ -700,6 +700,7 @@ i.fab.fa-facebook::before {
 	background-color: #00c6ff;
 	cursor: default;
 }
+
 .post-page-numbers.current span,
 .post-page-numbers.current:hover span,
 .page-numbers.current,
@@ -1423,3 +1424,15 @@ article,
 .mymenu-related {
 	background-color: #ffffff;
 }
+
+/*
+固定ページ各ページのh1の上を空けたいが、introduction をデフォルトテンプレートで作ってしまっているので、一律の適用ができず中断。
+*/
+
+/*
+.page-template-page-web h1,
+.page-template-page-job h1,
+.page-template-page-music h1 {
+	margin-top: -4px;
+}
+*/

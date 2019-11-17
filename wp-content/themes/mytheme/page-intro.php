@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: page-job.php
+Template Name: page-intro.php
 */
 ?>
 
@@ -37,21 +37,27 @@ Template Name: page-job.php
 				<?php the_title(); ?>
 			</h1>
 
+<!--
 			<div class="kiji-date">
 				<i class="fa fa-pencil"></i>
-				<time datetime="<?php echo get_the_date('Y-m-d'); ?>">
+-->
+<!--
+				<time datetime="<?php // echo get_the_date('Y-m-d'); ?>">
 						投稿：
-					<?php echo get_the_date(); ?>
-				</time>
+-->
+					<?php // echo get_the_date(); ?>
+<!--				</time>-->
 
-				<?php if(get_the_modified_date('Ymd') > get_the_date('Ymd')): ?>
+				<?php // if(get_the_modified_date('Ymd') > get_the_date('Ymd')): ?>
+<!--
 				|
-				<time datetime="<?php echo get_the_modified_date('Y-m-d'); ?>">
+				<time datetime="<?php // echo get_the_modified_date('Y-m-d'); ?>">
 					更新：
-					<?php echo get_the_modified_date(); ?>
-				</time>
-				<?php endif; ?>
-			</div>
+-->
+					<?php // echo get_the_modified_date(); ?>
+<!--				</time>-->
+				<?php // endif; ?>
+<!--			</div>-->
 
 			<?php if(has_post_thumbnail() && $page == 1): ?>
 			<div class="catch">
@@ -73,14 +79,25 @@ Template Name: page-job.php
 	</div><!-- .contents -->
 
 	<div class="sub">
-		<?php get_sidebar('job'); ?>
-		<aside class="mymenu mymenu-page">
-			<h2>hideyov7</h2>
-			<?php wp_nav_menu(array(
-				'theme_location' => 'pagenav'
-			)); ?>
+		<?php $myposts = get_posts(array(
+			'post_type' => 'post',
+			'posts_per_page' => '7'
+		));
+	if($myposts): ?>
+		<aside class="mymenu mymenu-news">
+			<h2>最近の投稿</h2>
+			<ul>
+				<?php foreach($myposts as $post): setup_postdata($post); ?>
+				<li><a href="<?php the_permalink(); ?>">
+						<?php the_title(); ?>
+					</a></li>
+				<?php endforeach; ?>
+			</ul>
+
 		</aside>
+		<?php wp_reset_postdata(); endif; ?>
 	</div>
+
 </div><!-- .container -->
 
 <?php get_footer(); ?>

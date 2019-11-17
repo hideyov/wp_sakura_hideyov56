@@ -40,7 +40,7 @@ Template Name: page-music.php
 			<div class="kiji-date">
 				<i class="fa fa-pencil"></i>
 				<time datetime="<?php echo get_the_date('Y-m-d'); ?>">
-					投稿：
+						投稿：
 					<?php echo get_the_date(); ?>
 				</time>
 
@@ -52,7 +52,6 @@ Template Name: page-music.php
 				</time>
 				<?php endif; ?>
 			</div>
-
 
 			<?php if(has_post_thumbnail() && $page == 1): ?>
 			<div class="catch">
