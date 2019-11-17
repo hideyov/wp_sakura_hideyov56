@@ -987,7 +987,7 @@ i.fab.fa-facebook::before {
 		padding: 0 8px 0 8px;
 		color: #daffff;
 		background-color: #0096ed;
-		box-shadow: 2px 1px 0 rgba(255, 255, 255, 0.6);
+		box-shadow: 2px 1px 1px #000033;
 	}
 
 	.mymenu-top .text p {

@@ -153,6 +153,16 @@ register_sidebar(array(
 	'after_title' => '</h2>'
 ));
 
+register_sidebar(array(
+	'id' => 'front_submenu',
+	'name' => 'フロントページサブメニュー',
+	'description' => 'フロントページのサブメニューに表示するウィジェットを指定。',
+	'before_widget' => '<aside id="%1$s" class="mymenu widget %2$s">',
+	'after_widget' => '</aside>',
+	'before_title' => '<h2 class="widgettitle">',
+	'after_title' => '</h2>'
+));
+
 // research form - 検索フォーム
 add_theme_support('html5', array('search_form'));
 
