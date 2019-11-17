@@ -1436,3 +1436,13 @@ article,
 	margin-top: -4px;
 }
 */
+
+/* intro ページh3 */
+.intro-h3 {
+	border-left: 5px solid #0096e0;
+	margin-top: 20px;
+	margin-bottom: 16px;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 6px;
+}
