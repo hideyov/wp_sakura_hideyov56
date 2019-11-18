@@ -408,7 +408,11 @@ footer,
 
 /* 整形済みコード */
 .preformatted_code {
-	background-color: #ececec;
+/*	background-color: #ececec;*/
+	background-color: #565656;
+	background-color: #484848;
+/*	color: #ccffff;*/
+	color: #d9ecec;
 	padding: 12px 20px;
 	margin: 20px 0;
 	border-radius: 7px;
