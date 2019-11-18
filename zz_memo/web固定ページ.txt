@@ -55,5 +55,10 @@ Notice: Undefined index: pickupnav_music in /home/hideyov/www/blog/wp-content/th
 
 結局、ダッシュボードの「メニュー > 位置の管理」で、「テーマの位置」と「指定されたメニュー」が合致してなかっただけでした。
 
+******
+191119
+******
+
+introページのサイドバーに「ページナビゲーション」を表示させる！
 
 
