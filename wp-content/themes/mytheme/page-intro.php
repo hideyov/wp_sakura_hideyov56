@@ -37,27 +37,21 @@ Template Name: page-intro.php
 				<?php the_title(); ?>
 			</h1>
 
-<!--
 			<div class="kiji-date">
 				<i class="fa fa-pencil"></i>
--->
-<!--
-				<time datetime="<?php // echo get_the_date('Y-m-d'); ?>">
+				<time datetime="<?php echo get_the_date('Y-m-d'); ?>">
 						投稿：
--->
-					<?php // echo get_the_date(); ?>
-<!--				</time>-->
+					<?php echo get_the_date(); ?>
+				</time>
 
-				<?php // if(get_the_modified_date('Ymd') > get_the_date('Ymd')): ?>
-<!--
+				<?php if(get_the_modified_date('Ymd') > get_the_date('Ymd')): ?>
 				|
-				<time datetime="<?php // echo get_the_modified_date('Y-m-d'); ?>">
+				<time datetime="<?php echo get_the_modified_date('Y-m-d'); ?>">
 					更新：
--->
-					<?php // echo get_the_modified_date(); ?>
-<!--				</time>-->
-				<?php // endif; ?>
-<!--			</div>-->
+					<?php echo get_the_modified_date(); ?>
+				</time>
+				<?php endif; ?>
+			</div>
 
 			<?php if(has_post_thumbnail() && $page == 1): ?>
 			<div class="catch">
