@@ -40,7 +40,7 @@ Template Name: page-intro.php
 			<div class="kiji-date">
 				<i class="fa fa-pencil"></i>
 				<time datetime="<?php echo get_the_date('Y-m-d'); ?>">
-						投稿：
+					投稿：
 					<?php echo get_the_date(); ?>
 				</time>
 
@@ -73,6 +73,13 @@ Template Name: page-intro.php
 	</div><!-- .contents -->
 
 	<div class="sub">
+		
+		<?php
+		if (is_active_sidebar('searchform_submenu')) {
+			dynamic_sidebar('searchform_submenu');
+		}
+		?>
+		
 		<?php $myposts = get_posts(array(
 			'post_type' => 'post',
 			'posts_per_page' => '7'
@@ -90,6 +97,13 @@ Template Name: page-intro.php
 
 		</aside>
 		<?php wp_reset_postdata(); endif; ?>
+		
+		<aside class="mymenu mymenu-page">
+			<h2>hideyov7</h2>
+			<?php wp_nav_menu(array(
+				'theme_location' => 'pagenav'
+			)); ?>
+		</aside>
 	</div>
 
 </div><!-- .container -->

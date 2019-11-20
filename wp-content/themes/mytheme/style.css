@@ -329,7 +329,7 @@ footer,
 	margin: 40px 0 30px;
 	padding: 25px 20px 20px;
 	border-radius: 5px;
-	background-color: #cfedb7;
+	background-color: #cffdb7;
 	font-size: 0.825rem;
 	clear: both;
 }
@@ -347,8 +347,8 @@ footer,
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	background-color: #5ab80e;
-	color: #ffffff;
+	background-color: #6fedc7;
+	color: #0083c6;
 	font-family: 'FontAwesome';
 	font-size: 0.9rem;
 	line-height: 1;
@@ -363,8 +363,8 @@ footer,
 	content: 'reference';
 	padding: 3px 10px 3px 20px;
 	border-radius: 5px;
-	background-color: #5ab80e;
-	color: #ffffff;
+	background-color: #6fedc7;
+	color: #0083c6;
 	font-family: Verdana, Helvatica, sans-serif;
 	font-weight: normal;
 	line-height: 1;
@@ -376,7 +376,6 @@ footer,
 	margin: 40px 0 30px;
 	padding: 20px;
 	border-radius: 7px;
-	border: solid 1px #ff0000;
 	background-color: #ffefef;
 	font-size: 0.825rem;
 	clear: both;
@@ -408,10 +407,7 @@ footer,
 
 /* 整形済みコード */
 .preformatted_code {
-/*	background-color: #ececec;*/
-	background-color: #565656;
 	background-color: #484848;
-/*	color: #ccffff;*/
 	color: #d9ecec;
 	padding: 12px 20px;
 	margin: 20px 0;
@@ -611,7 +607,7 @@ i.fab.fa-facebook::before {
 	display: block;
 	margin: 0 6px;
 	padding: 6px 8px;
-	background-color: #cfedb7;
+	background-color: #6fedc7;
 	border-radius: 5px;
 	color: #0093e6;
 	font-size: 0.825rem;
@@ -684,7 +680,7 @@ i.fab.fa-facebook::before {
 	margin-bottom: 6px;
 	border-radius: 5px;
 	text-decoration: none;
-	background-color: #cfedb7;
+	background-color: #6fedc7;
 }
 
 .pagination-single a:hover {
@@ -727,7 +723,6 @@ i.fab.fa-facebook::before {
 	padding-left: 6px;
 	border-bottom: solid 2px #0096e0;
 	border-left: solid 6px #0096e0;
-	/*	color: #666666;*/
 	font-size: 1.1rem;
 }
 
@@ -1266,26 +1261,26 @@ iframe {
 
 /* page menu - ocntents menu - コンテンツメニュー */
 
+.mymenu-page {
+	padding: 6px;
+	background-color: #000033;
+}
+
 .mymenu-page h2 {
 	margin: 0;
 	padding: 2px 0 4px 10px;
 	font-family: 'Kanit', sans-serif;
 	font-style: italic;
 	font-size: 1.2rem;
+	color: #00c6ff;
 }
 
 .mymenu-page li a {
 	padding: 0 10px 0 10px;
-	color: #0096e0;
+	color: #00c6ff;
 	border-left: solid 6px #00c6ff;
 	margin: 12px 0 10px 10px;
 }
-
-/*
-.mymenu-page li:last-child a {
-	border: none;
-}
-*/
 
 /* header image - ヘッダー画像 */
 .hero {
@@ -1386,11 +1381,6 @@ footer {
 	background-color: #000033;
 }
 
-header sitenav a {
-	/*	color: #0096e0;*/
-	/*	color: #00a9d3;*/
-}
-
 header .sitenav a:hover {
 	color: #00e6ff;
 	background-color: #000033;
@@ -1441,10 +1431,19 @@ article,
 }
 */
 
-/* intro ページh3 */
+/* intro,music 固定ページh3 */
 .intro-h3 {
 	border-left: 5px solid #0096e0;
-	margin-top: 20px;
+	margin-top: 24px;
+	margin-bottom: 16px;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 6px;
+}
+
+.music-h3 {
+	border-left: 5px solid #0096e0;
+	margin-top: 10px;
 	margin-bottom: 16px;
 	padding-top: 0;
 	padding-bottom: 0;

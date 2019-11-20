@@ -73,6 +73,9 @@ Template Name: page-music.php
 	</div><!-- .contents -->
 
 	<div class="sub">
+		
+		<?php dynamic_sidebar('searchform_submenu'); ?>
+		
 		<?php get_sidebar('music'); ?>
 		<aside class="mymenu mymenu-page">
 			<h2>hideyov7</h2>

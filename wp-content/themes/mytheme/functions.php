@@ -2,7 +2,7 @@
 
 // excerption -- 概要（抜粋）の文字数
 function my_length($length) {
-	return 50;
+	return 64;
 }
 add_filter('excerpt_mblength', 'my_length');
 
@@ -154,16 +154,16 @@ register_sidebar(array(
 ));
 
 register_sidebar(array(
-	'id' => 'front_submenu',
-	'name' => 'フロントページサブメニュー',
-	'description' => 'フロントページのサブメニューに表示するウィジェットを指定。',
+	'id' => 'searchform_submenu',
+	'name' => '検索フォームサブメニュー',
+	'description' => 'フロントページと固定ページのサブメニューに表示するウィジェットを指定。',
 	'before_widget' => '<aside id="%1$s" class="mymenu widget %2$s">',
 	'after_widget' => '</aside>',
 	'before_title' => '<h2 class="widgettitle">',
 	'after_title' => '</h2>'
 ));
 
-// research form - 検索フォーム
+// research form - 索フォーム
 add_theme_support('html5', array('search_form'));
 
 // header image - ヘッダー画像

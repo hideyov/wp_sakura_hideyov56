@@ -73,6 +73,13 @@ Template Name: page-web.php
 	</div><!-- .contents -->
 
 	<div class="sub">
+		
+		<?php
+		if (is_active_sidebar('searchform_submenu')) {
+			dynamic_sidebar('searchform_submenu');
+		}
+		?>
+		
 		<?php get_sidebar('web'); ?>
 		<aside class="mymenu mymenu-page">
 			<h2>hideyov7</h2>
