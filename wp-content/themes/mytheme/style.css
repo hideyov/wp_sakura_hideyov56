@@ -370,6 +370,10 @@ footer,
 	line-height: 1;
 }
 
+.point a {
+	text-decoration: none;
+}
+
 /* 注意書き */
 .attention {
 	position: relative;
