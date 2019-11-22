@@ -2,6 +2,16 @@
 <html lang="ja">
 
 <head prefix="og: http://ogp.me/ns#">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153174827-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'UA-153174827-1');
+	</script>
+
 	<meta charset="UTF-8">
 	<title>
 		<?php wp_title('|', true, 'right'); ?>
@@ -13,7 +23,7 @@
 	<!--	
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	-->
-<!--	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Mansalva|Special+Elite&display=swap" rel="stylesheet">-->
+	<!--	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Mansalva|Special+Elite&display=swap" rel="stylesheet">-->
 	<link href="https://fonts.googleapis.com/css?family=Kanit:400,400i&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?ver=<?php echo date('U'); ?>">
