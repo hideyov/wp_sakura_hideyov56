@@ -2,7 +2,7 @@
 
 // excerption -- 概要（抜粋）の文字数
 function my_length($length) {
-	return 64;
+	return 54;
 }
 add_filter('excerpt_mblength', 'my_length');
 
