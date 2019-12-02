@@ -1,0 +1,14 @@
+Yummy FTP pro でさくらサーバーにSSH接続する
+***********************************
+さくらサーバーへのSSH接続設定(hideyov7)
+***********************************
+
+プロトコル：SFTP
+サーバ：www398.sakura.ne.jp
+ユーザ名：hideyov
+pw: if8vue56js
+
+ポート：22(パッシブFTPを使用)
+初期フォルダ：/home/hideyov/www/blog
+ローカルパス： ~/bitBucket_eje/wp_hideyov7
+SSHキー： ~/.ssh/id_rsa.pub
