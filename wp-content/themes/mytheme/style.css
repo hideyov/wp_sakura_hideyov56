@@ -421,6 +421,14 @@ footer,
 	overflow: scroll;
 }
 
+.inline_code {
+	background-color: #dedede;
+    color: #697c7c;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 0.825rem;
+}
+
 /* 投稿日と更新日 */
 .kiji-date {
 	margin-bottom: 20px;
@@ -1453,3 +1461,4 @@ article,
 	padding-bottom: 0;
 	padding-left: 6px;
 }
+

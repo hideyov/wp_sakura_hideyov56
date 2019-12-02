@@ -64,6 +64,11 @@ function editor_setting($init) {
 			'classes' => 'pickup'
 		),
 		array(
+			'title' => 'in line コード',
+			'inline' => 'code',
+			'classes' => 'inline_code'
+		),
+		array(
 			'title' => '整形済みコード',
 			'block' => 'pre',
 			'classes' => 'preformatted_code'
