@@ -13,27 +13,9 @@ class WPFFAG_Product_Menu {
 			<div class="wpfrank-products-title"><h1>Our Premium Products</h1></div>
 			<div class="wpfrank-products">
 				<div class="wpfrank-product">
-					<div class="wpfrank-product-title">WP Video Album Gallery Pro</div>
-					<img class="wpfrank-product-image" src="<?php echo FAG_PLUGIN_URL . "img/products/WP-Video-Album-Gallery-Pro.jpg"; ?>">
-					<div class="wpfrank-product-tagline">Premium Plugin To Add Eye Catching Video Galleries On WordPress Website</div>
-					<div class="wpfrank-product-links">
-						<a target="_blank" href="http://wpfrank.com/demo/wp-video-album-gallery-pro/" class="wpfrank-link-button wpfrank-try-now">Try Now</a>
-						<a target="_blank" href="http://wpfrank.com/account/signup/wp-video-album-gallery-pro" class="wpfrank-link-button wpfrank-buy-now">Buy Now</a>
-					</div>
-				</div>
-				<div class="wpfrank-product">
-					<div class="wpfrank-product-title">WP Photo Gallery Pro</div>
-					<img class="wpfrank-product-image" src="<?php echo FAG_PLUGIN_URL . "img/products/WP-Photo-Gallery-Pro.jpg"; ?>">
-					<div class="wpfrank-product-tagline">Premium Plugin To Add Eye Catching Photo Galleries On WordPress Website</div>
-					<div class="wpfrank-product-links">
-						<a target="_blank" href="http://wpfrank.com/demo/wp-photo-gallery-pro/" class="wpfrank-link-button wpfrank-try-now">Try Now</a>
-						<a target="_blank" href="http://wpfrank.com/account/signup/wp-photo-gallery-pro" class="wpfrank-link-button wpfrank-buy-now">Buy Now</a>
-					</div>
-				</div>
-				<div class="wpfrank-product">
 					<div class="wpfrank-product-title">Appointment Scheduler Pro</div>
 					<img class="wpfrank-product-image" src="<?php echo FAG_PLUGIN_URL . "img/products/Appointment-Scheduler-Pro.jpg"; ?>">
-					<div class="wpfrank-product-tagline">Premium Appointment Plugin To Add Booking System On WordPress Website</div>
+					<div class="wpfrank-product-tagline">Premium Appointment Plugin To Add Booking System On Website</div>
 					<div class="wpfrank-product-links">
 						<a target="_blank" href="http://wpfrank.com/demo/appointment-scheduler-pro/" class="wpfrank-link-button wpfrank-try-now">Try Now</a>
 						<a target="_blank" href="http://wpfrank.com/account/signup/appointment-scheduler-pro" class="wpfrank-link-button wpfrank-buy-now">Buy Now</a>
@@ -51,28 +33,10 @@ class WPFFAG_Product_Menu {
 				<div class="wpfrank-product">
 					<div class="wpfrank-product-title">Flickr Album Gallery Pro</div>
 					<img class="wpfrank-product-image" src="<?php echo FAG_PLUGIN_URL . "img/products/Flickr-Album-Gallery-Pro.jpg"; ?>">
-					<div class="wpfrank-product-tagline">Premium Flickr Plugin To Fetch And Display Albums On WordPress Website</div>
+					<div class="wpfrank-product-tagline">Premium Flickr Plugin To Fetch And Display Albums On Website</div>
 					<div class="wpfrank-product-links">
 						<a target="_blank" href="http://wpfrank.com/demo/flickr-album-gallery-pro/" class="wpfrank-link-button wpfrank-try-now">Try Now</a>
 						<a target="_blank" href="http://wpfrank.com/account/signup/flickr-album-gallery-pro" class="wpfrank-link-button wpfrank-buy-now">Buy Now</a>
-					</div>
-				</div>
-				<div class="wpfrank-product">
-					<div class="wpfrank-product-title">WP Lightbox Gallery Pro</div>
-					<img class="wpfrank-product-image" src="<?php echo FAG_PLUGIN_URL . "img/products/WP-Lightbox-Gallery-Pro.jpg"; ?>">
-					<div class="wpfrank-product-tagline">Premium Plugin To Add Photo Galleries with Lightbox On WordPress Website</div>
-					<div class="wpfrank-product-links">
-						<a target="_blank" href="http://wpfrank.com/demo/wp-lightbox-gallery-pro/" class="wpfrank-link-button wpfrank-try-now">Try Now</a>
-						<a target="_blank" href="http://wpfrank.com/account/signup/wp-lightbox-gallery-pro" class="wpfrank-link-button wpfrank-buy-now">Buy Now</a>
-					</div>
-				</div>
-				<div class="wpfrank-product">
-					<div class="wpfrank-product-title">All In One Premium Plugins Bundle</div>
-					<img class="wpfrank-product-image" src="<?php echo FAG_PLUGIN_URL . "img/products/All-In-One Premium-Plugins-Bundle.jpg"; ?>">
-					<div class="wpfrank-product-tagline">All In One Premium Plugins Bundle Package for WordPress Website</div>
-					<div class="wpfrank-product-links">
-						<a target="_blank" href="http://wpfrank.com/demo/" class="wpfrank-link-button wpfrank-try-now">Try Now</a>
-						<a target="_blank" href="http://wpfrank.com/account/signup/wordpress-premium-plugins-bundle" class="wpfrank-link-button wpfrank-buy-now">Buy Now</a>
 					</div>
 				</div>
 			</div>

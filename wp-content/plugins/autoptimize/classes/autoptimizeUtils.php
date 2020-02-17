@@ -45,7 +45,7 @@ class autoptimizeUtils
     public static function strpos( $haystack, $needle, $offset = 0, $encoding = null )
     {
         if ( self::mbstring_available() ) {
-            return ( null === $encoding ) ? \mb_strpos( $haystack, $needle, $offset ) : \mb_strlen( $haystack, $needle, $offset, $encoding );
+            return ( null === $encoding ) ? \mb_strpos( $haystack, $needle, $offset ) : \mb_strpos( $haystack, $needle, $offset, $encoding );
         } else {
             return \strpos( $haystack, $needle, $offset );
         }
@@ -301,9 +301,11 @@ class autoptimizeUtils
     /**
      * Checks to see if 3rd party services are available and stores result in option
      *
+     * TODO This should be two separate methods.
+     *
      * @param string $return_result should we return resulting service status array (default no).
      *
-     * @return none if $return_result is false (default), array if $return_result is true.
+     * @return null|array Service status or null.
      */
     public static function check_service_availability( $return_result = false )
     {
@@ -312,13 +314,14 @@ class autoptimizeUtils
             if ( '200' == wp_remote_retrieve_response_code( $service_availability_resp ) ) {
                 $availabilities = json_decode( wp_remote_retrieve_body( $service_availability_resp ), true );
                 if ( is_array( $availabilities ) ) {
-                    update_option( 'autoptimize_service_availablity', $availabilities );
+                    autoptimizeOptionWrapper::update_option( 'autoptimize_service_availablity', $availabilities );
                     if ( $return_result ) {
                         return $availabilities;
                     }
                 }
             }
         }
+        return null;
     }
 
     /**
@@ -355,5 +358,40 @@ class autoptimizeUtils
         }
 
         return $ipa_exists && \is_plugin_active( $plugin_file );
+    }
+
+    /**
+     * Returns a node without ID attrib for use in noscript tags
+     *
+     * @param string $node an html tag.
+     *
+     * @return string
+     */
+    public static function remove_id_from_node( $node ) {
+        if ( strpos( $node, 'id=' ) === false || apply_filters( 'autoptimize_filter_utils_keep_ids', false ) ) {
+            return $node;
+        } else {
+            return preg_replace( '#(.*) id=[\'|"].*[\'|"] (.*)#Um', '$1 $2', $node );
+        }
+    }
+
+    /**
+     * Returns true if given $str ends with given $test.
+     *
+     * @param string $str String to check.
+     * @param string $test Ending to match.
+     *
+     * @return bool
+     */
+    public static function str_ends_in( $str, $test )
+    {
+        // @codingStandardsIgnoreStart
+        // substr_compare() is bugged on 5.5.11: https://3v4l.org/qGYBH
+        // return ( 0 === substr_compare( $str, $test, -strlen( $test ) ) );
+        // @codingStandardsIgnoreEnd
+
+        $length = strlen( $test );
+
+        return ( substr( $str, -$length, $length ) === $test );
     }
 }

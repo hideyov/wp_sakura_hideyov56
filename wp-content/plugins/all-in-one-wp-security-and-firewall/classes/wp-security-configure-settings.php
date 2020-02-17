@@ -47,6 +47,7 @@ class AIOWPSecurity_Configure_Settings
         $aio_wp_security->configs->set_value('aiowps_enable_login_captcha','');//Checkbox
         $aio_wp_security->configs->set_value('aiowps_enable_custom_login_captcha','');//Checkbox
         $aio_wp_security->configs->set_value('aiowps_enable_woo_login_captcha','');//Checkbox
+        $aio_wp_security->configs->set_value('aiowps_enable_woo_lostpassword_captcha','');//Checkbox
         $aio_wp_security->configs->set_value('aiowps_enable_woo_register_captcha','');//Checkbox
         $aio_wp_security->configs->set_value('aiowps_enable_lost_password_captcha','');//Checkbox
         $aio_wp_security->configs->set_value('aiowps_captcha_secret_key',AIOWPSecurity_Utility::generate_alpha_numeric_random_string(20));//Hidden secret value which will be used to do some captcha processing. This will be assigned a random string generated when captcha settings saved
@@ -81,6 +82,7 @@ class AIOWPSecurity_Configure_Settings
 
         //Firewall features
         $aio_wp_security->configs->set_value('aiowps_enable_basic_firewall','');//Checkbox
+        $aio_wp_security->configs->set_value('aiowps_max_file_upload_size','10'); //Default 10MB
         $aio_wp_security->configs->set_value('aiowps_enable_pingback_firewall','');//Checkbox - blocks all access to XMLRPC
         $aio_wp_security->configs->set_value('aiowps_disable_xmlrpc_pingback_methods','');//Checkbox - Disables only pingback methods in XMLRPC functionality
         $aio_wp_security->configs->set_value('aiowps_block_debug_log_file_access','');//Checkbox
@@ -203,6 +205,7 @@ class AIOWPSecurity_Configure_Settings
         $aio_wp_security->configs->add_value('aiowps_enable_custom_login_captcha','');//Checkbox
         $aio_wp_security->configs->add_value('aiowps_enable_woo_login_captcha','');//Checkbox
         $aio_wp_security->configs->add_value('aiowps_enable_woo_register_captcha','');//Checkbox
+        $aio_wp_security->configs->add_value('aiowps_enable_woo_lostpassword_captcha','');//Checkbox
         $aio_wp_security->configs->add_value('aiowps_captcha_secret_key',AIOWPSecurity_Utility::generate_alpha_numeric_random_string(20));//Hidden secret value which will be used to do some captcha processing. This will be assigned a random string generated when captcha settings saved
 
         //User registration
@@ -232,6 +235,7 @@ class AIOWPSecurity_Configure_Settings
 
         //Firewall features
         $aio_wp_security->configs->add_value('aiowps_enable_basic_firewall','');//Checkbox
+        $aio_wp_security->configs->add_value('aiowps_max_file_upload_size','10');
         $aio_wp_security->configs->add_value('aiowps_enable_pingback_firewall','');//Checkbox - blocks all access to XMLRPC
         $aio_wp_security->configs->add_value('aiowps_disable_xmlrpc_pingback_methods','');//Checkbox - Disables only pingback methods in XMLRPC functionality
         $aio_wp_security->configs->add_value('aiowps_block_debug_log_file_access','');//Checkbox

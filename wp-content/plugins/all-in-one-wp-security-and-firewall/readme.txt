@@ -1,10 +1,10 @@
 === All In One WP Security & Firewall ===
-Contributors: Tips and Tricks HQ, wpsolutions, Peter Petreski, Ruhul Amin, mbrsolution, chesio
+Contributors: Tips and Tricks HQ, wpsolutions, Peter Petreski, Ruhul Amin, mbrsolution
 Donate link: https://www.tipsandtricks-hq.com
 Tags: security, secure, Anti Virus, antivirus, ban, ban hacker, virus, firewall, firewall security, login, lockdown, htaccess, hack, malware, vulnerability, protect, protection, phishing, database, backup, plugin, sql injection, ssl, restrict, login captcha, bot, hotlink, 404 detection, admin, rename, all in one, scan, scanner, iframe,
 Requires at least: 4.7
-Tested up to: 5.2
-Stable tag: trunk
+Tested up to: 5.3
+Stable tag: 4.4.3
 License: GPLv3
 
 A comprehensive, user-friendly, all in one WordPress security and firewall plugin for your site.
@@ -107,9 +107,6 @@ or malicious bots who do not have a special cookie in their browser. You (the si
 * Ability to hide admin login page. Rename your WordPress login page URL so that bots and hackers cannot access your real WordPress login URL. This feature allows you to change the default login page (wp-login.php) to something you configure.
 * Ability to use Login Honeypot which will helps reduce brute force login attempts by robots.
 
-= WhoIs Lookup =
-* Perform a WhoIs lookup of a suspicious host or IP address and get full details.
-
 = Security Scanner =
 * The file change detection scanner can alert you if any files have changed in your WordPress system. You can then investigate and see if that was a legitimate change or some bad code was injected.
 
@@ -186,6 +183,38 @@ https://www.tipsandtricks-hq.com/wordpress-security-and-firewall-plugin
 None
 
 == Changelog ==
+
+= 4.4.3 =
+- Improved file change detection feature to address DB backups failing silently in some cases due to very large serialized data stored in a single row.
+- Added new action hook (aiowps_rename_login_load) just before renamed login page is loaded.
+- Added a check to ensure that woocommerce captcha settings are displayed only if woocommerce plugin is installed/active.
+- Fixed recaptcha bugs.
+- Added configurable item for max file upload size in basic firewall rules.
+
+= 4.4.2 =
+- Fixed vulnerability related to open redirect and exposure of hidden login page for specific case. (Thanks to Erwan (wpscanteam) for letting us know)
+
+= 4.4.1 =
+- Fixed bug where Apache directives were not being re-added into the .htaccess file after plugin re-activation.
+- Fixed bug related to account activity logout date not being set.
+
+= 4.4.0 =
+- Added robustness to login lockdown feature by replacing the strtotime function with DateTime/DateInterval. 
+This should prevent 32-bit systems from being constrained to the max date of 19 Jan 2038.
+- Fixed bugs related to captcha features.
+- Fixed and improved "Logged In Users" functionality for multisite.
+- Always set valid dates, to avoid errors when strict mode is enabled on mysql. Thanks to Davide.
+
+= 4.3.9.4 =
+- Removed whois feature because it adds relatively little value and the third-party library used is not being maintained regularly.
+- Fixed "headers already sent" error when bulk action performed using aiowps list table.
+
+= 4.3.9.3 =
+- Fixed another captcha bug related to comment form.
+
+= 4.3.9.2 =
+- Fixed various captcha bugs: woocommerce lost password page, custom login form page, etc
+
 = 4.3.9.1 =
 - Fixed rename login page feature bug introduced after WP core change in version 5.2.
 

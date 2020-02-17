@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: Flickr Album Gallery
-Plugin URI:  http://wpfrank.com/
-Description: Flickr Album Image Gallery is based on Flickr JS API. Use flickr image gallery plugin to display all your Flickr Albums on your WordPress Blog Site. You can use your own Flickr API and Flickr Album ID to publish Flickr Albums on your WordPress Blog website.
-Version:     2.0.9
-Author:      FARAZFRANK
-Author URI:  http://wpfrank.com/
-Text Domain: flickr-album-gallery
-Domain Path: /languages
-License:     GPL2
+ * Plugin Name: Flickr Album Gallery
+ * Plugin URI:  https://developer.wordpress.org/plugins/the-basics/
+ * Description: Flickr Album Gallery is on JS API plugin to display all public Flickr albums on your WordPress website.
+ * Version:     2.1.0
+ * Author:      FARAZFRANK
+ * Author URI:  https://wpfrank.com/
+ * Text Domain: flickr-album-gallery
+ * Domain Path: /languages
+ * License:     GPL2
 
 Flickr Album Gallery is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -29,6 +29,12 @@ along with Flickr Album Gallery. If not, see http://www.gnu.org/licenses/gpl-2.0
  */
 define("FAG_TEXT_DOMAIN", "flickr-album-gallery");
 define("FAG_PLUGIN_URL", plugin_dir_url(__FILE__));
+
+//load js script
+function wpfrank_fag_load_scripts() {
+	wp_enqueue_script( 'jquery' );
+}
+add_action( 'wp_enqueue_scripts', 'wpfrank_fag_load_scripts' );
 
 /**
  * Flickr album gallery Plugin Class
@@ -55,12 +61,12 @@ define("FAG_PLUGIN_URL", plugin_dir_url(__FILE__));
 	// 2 - Register Flickr Album Custom Post Type
 	public function FlickrAlbumGallery_CPT() {
 		$labels = array(
-			'name' => _x( 'Flickr Album Gallery', FAG_TEXT_DOMAIN ),
+			'name' => __( 'Flickr Album Gallery', FAG_TEXT_DOMAIN ),
 			'singular_name' => __( 'Flickr Album Gallery', FAG_TEXT_DOMAIN ),
-			'add_new' => __( 'Add New Gallery', FAG_TEXT_DOMAIN ),
-			'add_new_item' => __( 'Add New Gallery', FAG_TEXT_DOMAIN ),
-			'edit_item' => __( 'Edit Gallery', FAG_TEXT_DOMAIN ),
-			'new_item' => __( 'New Album Gallery', FAG_TEXT_DOMAIN ),
+			'add_new' => __( 'Add New Album', FAG_TEXT_DOMAIN ),
+			'add_new_item' => __( 'Add New Album', FAG_TEXT_DOMAIN ),
+			'edit_item' => __( 'Edit Flickr Album', FAG_TEXT_DOMAIN ),
+			'new_item' => __( 'New Flickr Album', FAG_TEXT_DOMAIN ),
 			'view_item' => __( 'View Album Gallery', FAG_TEXT_DOMAIN ),
 			'search_items' => __( 'Search Album Galleries', FAG_TEXT_DOMAIN ),
 			'not_found' => __( 'No Album Galleries Found', FAG_TEXT_DOMAIN ),
@@ -222,13 +228,13 @@ define("FAG_PLUGIN_URL", plugin_dir_url(__FILE__));
 	 */
 	public function fag_meta_box_form_function($post) {
 		// code-mirror css & js for custom css section
-		wp_enqueue_style('fag_codemirror-css', FAG_PLUGIN_URL.'css/codemirror/codemirror.css');
-		wp_enqueue_style('fag_blackboard', FAG_PLUGIN_URL.'css/codemirror/blackboard.css');
-		wp_enqueue_style('fag_show-hint-css', FAG_PLUGIN_URL.'css/codemirror/show-hint.css');
+		wp_enqueue_style('wpfrank-fag_codemirror-css', FAG_PLUGIN_URL.'css/codemirror/codemirror.css');
+		wp_enqueue_style('wpfrank-fag_blackboard', FAG_PLUGIN_URL.'css/codemirror/blackboard.css');
+		wp_enqueue_style('wpfrank-fag_show-hint-css', FAG_PLUGIN_URL.'css/codemirror/show-hint.css');
 
-		wp_enqueue_script('fag_codemirror-js',FAG_PLUGIN_URL.'css/codemirror/codemirror.js',array('jquery'));
-		wp_enqueue_script('fag_css-js',FAG_PLUGIN_URL.'css/codemirror/fag-css.js',array('jquery'));
-		wp_enqueue_script('fag_css-hint-js',FAG_PLUGIN_URL.'css/codemirror/css-hint.js',array('jquery'));
+		wp_enqueue_script('wpfrank-fag_codemirror-js',FAG_PLUGIN_URL.'css/codemirror/codemirror.js',array('jquery'));
+		wp_enqueue_script('wpfrank-fag_css-js',FAG_PLUGIN_URL.'css/codemirror/fag-css.js',array('jquery'));
+		wp_enqueue_script('wpfrank-fag_css-hint-js',FAG_PLUGIN_URL.'css/codemirror/css-hint.js',array('jquery'));
 
 		$FAG_Settings = unserialize(get_post_meta( $post->ID, 'fag_settings', true));
 		if(isset($FAG_Settings[0]['fag_api_key']) && $FAG_Settings[0]['fag_album_id']) {
@@ -259,21 +265,21 @@ define("FAG_PLUGIN_URL", plugin_dir_url(__FILE__));
 		}
 		?>
 		<p><?php _e("Enter Flickr API Key", FAG_TEXT_DOMAIN ); ?></p>
-		<input required type="text" style="width:50%;" name="flickr-api-key" id="flickr-api-key" value="<?php echo $FAG_API_KEY; ?>"> <a title="Get your flickr account API Key"href="http://wpfrank.com/how-to-get-flickr-api-key/" target="_blank"><?php _e("Get Your API Key", FAG_TEXT_DOMAIN ); ?></a>
+		<input required type="text" style="width:50%;" name="flickr-api-key" id="flickr-api-key" value="<?php echo $FAG_API_KEY; ?>"> <a title="Get your flickr account API Key"href="https://wpfrank.com/how-to-get-flickr-api-key/" target="_blank"><?php _e("Get Your API Key", FAG_TEXT_DOMAIN ); ?></a>
 
 		<p><?php _e("Enter Flickr Album ID", FAG_TEXT_DOMAIN ); ?></p>
-		<input required type="text" style="width:50%;" name="flickr-album-id" id="flickr-album-id" value="<?php echo $FAG_Album_ID; ?>"> <a title="Get your flickr photo Album ID" href="http://wpfrank.com/how-to-get-flickr-album-id/" target="_blank"><?php _e("Get Your Album ID", FAG_TEXT_DOMAIN ); ?></a>
+		<input required type="text" style="width:50%;" name="flickr-album-id" id="flickr-album-id" value="<?php echo $FAG_Album_ID; ?>"> <a title="Get your flickr photo Album ID" href="https://wpfrank.com/how-to-get-flickr-album-id/" target="_blank"><?php _e("Get Your Album ID", FAG_TEXT_DOMAIN ); ?></a>
 		<br><br>
 
 		<p><?php _e("Show Gallery Title", FAG_TEXT_DOMAIN ); ?>&nbsp;&nbsp;
-		<input type="radio" name="fag-show-title" id="fag-show-title" value="yes" <?php if($FAG_Show_Title == 'yes' ) echo "checked"; ?>>  <i class="fa fa-check fa-2x"></i> Yes
-		<input type="radio" name="fag-show-title" id="fag-show-title" value="no" <?php if($FAG_Show_Title == 'no' ) echo "checked"; ?>>  <i class="fa fa-times fa-2x"></i> NO
+		<input type="radio" name="fag-show-title" id="fag-show-title" value="yes" <?php if($FAG_Show_Title == 'yes' ) echo "checked"; ?>>  <i class="fa fa-check fa-2x"></i> <?php _e("Yes", FAG_TEXT_DOMAIN ); ?>
+		<input type="radio" name="fag-show-title" id="fag-show-title" value="no" <?php if($FAG_Show_Title == 'no' ) echo "checked"; ?>>  <i class="fa fa-times fa-2x"></i> <?php _e("No", FAG_TEXT_DOMAIN ); ?>
 		</p>
 		<br>
 
 		<p><?php _e("Gallery Column Layout", FAG_TEXT_DOMAIN ); ?>&nbsp;&nbsp;
 			<select name="fag-col-layout" id="fag-col-layout" class="fag_layout">
-	            <optgroup label="Select Column Layout">
+	            <optgroup label="<?php _e( "Select Column Layout", FAG_TEXT_DOMAIN ); ?>">
 	                <option value="col-md-4" <?php if ( $FAG_Col_Layout == 'col-md-4' ) {
 						echo "selected=selected";
 					} ?>><?php _e( "Three Column", FAG_TEXT_DOMAIN ); ?></option>
@@ -285,13 +291,13 @@ define("FAG_PLUGIN_URL", plugin_dir_url(__FILE__));
     	</p>
         <br>
 
-		<p><?php _e("Custom Css", FAG_TEXT_DOMAIN ); ?></p>
+		<p><?php _e("Custom CSS", FAG_TEXT_DOMAIN ); ?></p>
 		<?php if(!isset($FAG_Custom_CSS)) $FAG_Custom_CSS = ""; ?>
 		<textarea name="fag-custom-css" id="fag-custom-css" rows="5" cols="97"><?php echo $FAG_Custom_CSS; ?></textarea>
 		<p class="description">
-			<?php _e('Enter any custom css you want to apply.', FAG_TEXT_DOMAIN); ?>.<br>
+			<?php _e('Enter any custom CSS you want to apply.', FAG_TEXT_DOMAIN); ?>.<br>
 		</p>
-		<p class="custnote">Note: Please Do Not Use <b>Style</b> Tag With Custom CSS</p>
+		<p class="custnote"><?php _e('Note:', FAG_TEXT_DOMAIN); ?> <?php _e("Please don't use STYLE tag in custom CSS code", FAG_TEXT_DOMAIN); ?></p>
 		<hr>
 		<script type="text/javascript">
 		jQuery(document).ready(function(){
@@ -337,22 +343,22 @@ $FlickrAlbumGallery = new FlickrAlbumGallery();
 /**
  * Flickr Album gallery Short Code [FAG]
  */
-require_once("flickr-album-gallery-short-code.php");
+require_once("shortcode.php");
 
 global $FlickrAlbumGallery;
 $FlickrAlbumGallery = new FlickrAlbumGallery();
-require_once("flickr-album-gallery-widget.php");
+require_once("widget.php");
 
-add_action( "admin_notices", "fag_admin_notice_resport" );
-function fag_admin_notice_resport() {
+add_action( "admin_notices", "fag_admin_pro_banner" );
+function fag_admin_pro_banner() {
 	global $pagenow;
 	$fag_screen = get_current_screen();
 	if ( $pagenow == 'edit.php' && $fag_screen->post_type == "fa_gallery" && ! isset( $_GET['page'] ) ) {
-		require_once ( 'fag-feature-admin-notice.php' );
+		require_once ( 'banner.php' );
 	}
 }
 function fag_try_pro_links( $links ) {
-	$ism_pro_link = '<a href="http://wpfrank.com/demo/flickr-album-gallery-pro/" target="_blank">' . __( 'Try Pro', FAG_TEXT_DOMAIN ) . '</a>';
+	$ism_pro_link = '<a href="https://wpfrank.com/demo/flickr-album-gallery-pro/" target="_blank">Try Pro</a>';
 	array_unshift( $links, $ism_pro_link );
 	return $links;
 }

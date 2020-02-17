@@ -51,10 +51,10 @@ class AIOWPSecurity_List_Account_Activity extends AIOWPSecurity_List_Table {
     function get_columns(){
         $columns = array(
             'cb' => '<input type="checkbox" />', //Render a checkbox
-            'user_id' => 'User ID',
-            'user_login' => 'Username',
-            'login_date' => 'Login Date',
-            'logout_date' => 'Logout Date',
+            'user_id' => __('User ID', 'all-in-one-wp-security-and-firewall'),
+            'user_login' => __('Username', 'all-in-one-wp-security-and-firewall'),
+            'login_date' => __('Login Date', 'all-in-one-wp-security-and-firewall'),
+            'logout_date' => __('Logout Date', 'all-in-one-wp-security-and-firewall'),
             'login_ip' => 'IP'
         );
         return $columns;
@@ -117,14 +117,12 @@ class AIOWPSecurity_List_Account_Activity extends AIOWPSecurity_List_Table {
                 if($result !== false)
                 {
                     $redir_url = sprintf('admin.php?page=%s&tab=%s&bulk_count=%s', AIOWPSEC_USER_LOGIN_MENU_SLUG, $tab, count($entries));
-                    wp_redirect($redir_url);
-                    exit;
+                    AIOWPSecurity_Utility::redirect_to_url($redir_url);
                 } else {
                     // error on bulk delete
                     $aio_wp_security->debug_logger->log_debug("DB error: ".$wpdb->last_error,4);
                     $redir_url = sprintf('admin.php?page=%s&tab=%s&bulk_error=%s', AIOWPSEC_USER_LOGIN_MENU_SLUG, $tab, 1);
-                    wp_redirect($redir_url);
-                    exit;
+                    AIOWPSecurity_Utility::redirect_to_url($redir_url);
                     
                 }
             }
@@ -154,7 +152,7 @@ class AIOWPSecurity_List_Account_Activity extends AIOWPSecurity_List_Table {
         /**
          * First, lets decide how many records per page to show
          */
-        $per_page = 20;
+        $per_page = 100;
         $columns = $this->get_columns();
         $hidden = array();
         $sortable = $this->get_sortable_columns();
@@ -182,7 +180,7 @@ class AIOWPSecurity_List_Account_Activity extends AIOWPSecurity_List_Table {
         if(empty($search)) {
             $data = $wpdb->get_results("SELECT * FROM $login_activity_table ORDER BY $orderby $order", ARRAY_A);
         } else {
-            $data = $wpdb->get_results($wpdb->prepare("SELECT * FROM $login_activity_table WHERE `user_login` LIKE '%%%s%%' OR `login_ip` LIKE '%%%s%%' ORDER BY $orderby $order  LIMIT %d", $search, $search, 50), ARRAY_A);
+            $data = $wpdb->get_results($wpdb->prepare("SELECT * FROM $login_activity_table WHERE `user_login` LIKE '%%%s%%' OR `login_ip` LIKE '%%%s%%' ORDER BY $orderby $order  LIMIT %d", $search, $search, 100), ARRAY_A);
         }
         
         if (!$ignore_pagination) {

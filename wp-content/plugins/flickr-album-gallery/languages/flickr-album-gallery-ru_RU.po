@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flicker Album Gallery\n"
-"POT-Creation-Date: 2018-09-13 00:20+0530\n"
-"PO-Revision-Date: 2018-09-13 00:20+0530\n"
+"POT-Creation-Date: 2019-11-19 17:21+0530\n"
+"PO-Revision-Date: 2019-11-19 17:21+0530\n"
 "Last-Translator: Weblizar <lizarweb@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -17,123 +17,173 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: flickr-album-gallery-short-code.php:125
-msgid "Previous"
-msgstr "Назад"
+#: flickr-album-gallery.php:58 flickr-album-gallery.php:59
+#: flickr-album-gallery.php:70
+msgid "Flickr Album Gallery"
+msgstr "Flickr Album Gallery"
 
-#: flickr-album-gallery-short-code.php:128
-msgid "Next"
-msgstr "Далее"
-
-#: flickr-album-gallery-short-code.php:148
-msgid "Sorry! Invalid Flickr Album Shortcode Embedded"
-msgstr ""
-
-#: flickr-album-gallery-widget.php:62
-msgid "Widget Title"
-msgstr ""
-
-#: flickr-album-gallery-widget.php:67
-msgid "Select Any"
-msgstr ""
-
-#: flickr-album-gallery-widget.php:86
-msgid "No Title"
-msgstr ""
-
-#: flickr-album-gallery.php:61 flickr-album-gallery.php:62
-msgid "Add New Gallery"
+#: flickr-album-gallery.php:60 flickr-album-gallery.php:61
+#, fuzzy
+msgid "Add New Album"
 msgstr "Добавить новую галерею"
 
+#: flickr-album-gallery.php:62
+#, fuzzy
+msgid "Edit Flickr Album"
+msgstr "Введите ID альбома Flickr"
+
 #: flickr-album-gallery.php:63
-msgid "Edit Gallery"
-msgstr "Редактировать галерею"
+#, fuzzy
+msgid "New Flickr Album"
+msgstr "Введите ID альбома Flickr"
 
 #: flickr-album-gallery.php:64
-msgid "New Album Gallery"
-msgstr "Новая галерея альбома"
-
-#: flickr-album-gallery.php:65
 msgid "View Album Gallery"
 msgstr "Просмотр галереи альбома"
 
-#: flickr-album-gallery.php:66
+#: flickr-album-gallery.php:65
 msgid "Search Album Galleries"
 msgstr "Поиск галерей альбома"
 
-#: flickr-album-gallery.php:67
+#: flickr-album-gallery.php:66
 msgid "No Album Galleries Found"
 msgstr "Галерея альбома не найдена"
 
-#: flickr-album-gallery.php:68
+#: flickr-album-gallery.php:67
 msgid "No Album Galleries Found in Trash"
 msgstr "Галерея альбома в удаленном не найдена "
 
-#: flickr-album-gallery.php:69
+#: flickr-album-gallery.php:68
 msgid "Parent Album Gallery:"
 msgstr "Родительская галерея альбома:"
 
-#: flickr-album-gallery.php:70
+#: flickr-album-gallery.php:69
 msgid "All Album Galleries"
 msgstr "Все галереи альбома"
 
-#: flickr-album-gallery.php:101
+#: flickr-album-gallery.php:100
 msgid "Gallery"
 msgstr "Галерея"
 
-#: flickr-album-gallery.php:102
+#: flickr-album-gallery.php:101
 msgid "Album Gallery Shortcode"
 msgstr "Код галереи альбома"
 
-#: flickr-album-gallery.php:103
+#: flickr-album-gallery.php:102
 msgid "Date"
 msgstr "Дата"
 
-#: flickr-album-gallery.php:121
-msgid "Add Images"
-msgstr "Добавить изображения"
+#: flickr-album-gallery.php:120
+msgid "Configure Settings"
+msgstr ""
 
 #: flickr-album-gallery.php:122
 msgid "Flickr Album Gallery Shortcode"
 msgstr "Код галереи альбома Flickr "
 
-#: flickr-album-gallery.php:172
+#: flickr-album-gallery.php:171
 msgid ""
 "Use below shortcode in any Page/Post to publish your Flickr Album Gallery"
 msgstr ""
 "Используйте приведенный код на любой странице/в любом сообщении, чтобы "
 "опубликовать галерею"
 
-#: flickr-album-gallery.php:245
+#: flickr-album-gallery.php:261
 msgid "Enter Flickr API Key"
 msgstr "Введите ключ API Flickr "
 
-#: flickr-album-gallery.php:246
+#: flickr-album-gallery.php:262
 msgid "Get Your API Key"
 msgstr "Получите свой ключ API"
 
-#: flickr-album-gallery.php:248
+#: flickr-album-gallery.php:264
 msgid "Enter Flickr Album ID"
 msgstr "Введите ID альбома Flickr"
 
-#: flickr-album-gallery.php:249
+#: flickr-album-gallery.php:265
 msgid "Get Your Album ID"
 msgstr "Узнайте ID вашего альбома"
 
-#: flickr-album-gallery.php:252
+#: flickr-album-gallery.php:268
 msgid "Show Gallery Title"
 msgstr "Отображать название галереи"
 
-#: flickr-album-gallery.php:257
-msgid "Custom Css"
+#: flickr-album-gallery.php:269
+msgid "Yes"
 msgstr ""
 
-#: flickr-album-gallery.php:261
-msgid "Enter any custom css you want to apply."
+#: flickr-album-gallery.php:270
+msgid "No"
 msgstr ""
 
-#~ msgid "Flickr Album Gallery"
-#~ msgstr "Flickr Album Gallery"
+#: flickr-album-gallery.php:274
+msgid "Gallery Column Layout"
+msgstr ""
+
+#: flickr-album-gallery.php:276
+msgid "Select Column Layout"
+msgstr ""
+
+#: flickr-album-gallery.php:279
+msgid "Three Column"
+msgstr ""
+
+#: flickr-album-gallery.php:282
+msgid "Four Column"
+msgstr ""
+
+#: flickr-album-gallery.php:288
+msgid "Custom CSS"
+msgstr ""
+
+#: flickr-album-gallery.php:292
+msgid "Enter any custom CSS you want to apply."
+msgstr ""
+
+#: flickr-album-gallery.php:294
+msgid "Note:"
+msgstr ""
+
+#: flickr-album-gallery.php:294
+msgid "Please don't use STYLE tag in custom CSS code"
+msgstr ""
+
+#: shortcode.php:257
+msgid "Previous"
+msgstr "Назад"
+
+#: shortcode.php:260
+msgid "Next"
+msgstr "Далее"
+
+#: shortcode.php:280
+msgid "Sorry! Invalid Flickr Album Shortcode Embedded"
+msgstr ""
+
+#: widget.php:62
+msgid "Widget Title"
+msgstr ""
+
+#: widget.php:67
+msgid "Select Any"
+msgstr ""
+
+#: widget.php:86
+msgid "No Title"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Flickr Album Gallery Pro Features"
+#~ msgstr "Код галереи альбома Flickr "
+
+#~ msgid "Edit Gallery"
+#~ msgstr "Редактировать галерею"
+
+#~ msgid "New Album Gallery"
+#~ msgstr "Новая галерея альбома"
+
+#~ msgid "Add Images"
+#~ msgstr "Добавить изображения"
 
 #~ msgid "Support Forum"
 #~ msgstr "Форум поддержки"

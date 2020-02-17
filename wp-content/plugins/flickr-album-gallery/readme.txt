@@ -3,9 +3,9 @@ Contributors: FARAZFRANK
 Tags: flickr gallery, flickr album gallery, flickr shortcode, flickr widget, flicrk wordpress plugin
 Donate link: http://wpfrank.com
 Requires at least: 4.0
-Tested up to: 5.2.3
+Tested up to: 5.3
 Requires PHP: 5.x
-Stable tag: 2.0.9
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +18,21 @@ Flickr album gallery plugin shows your Flickr album images on your WordPress web
 
 Flickr Album Gallery plugin is such an easy to use and fully documented ready plugin.
 
+### Pro Features
+* Multiple Columns
+* Multiple Lightbox Options
+* Responsive Bootstrap Based Gallery Layout
+* Thumbnail Image Size Setting
+* Lightbox Image Size Setting
+* Thumbnail Limit Setting
+* Default User Settings
+* Image Hover Color
+* Image Hover Color Opacity
+* 8 Mouse Hover Effect And Animations On Album Thumbnails
+* Lazy Loading Setting
+* Masonry Layout
+* Custom CSS
+
 ### Check Free Plugin Demo - [Flickr Album Gallery](http://wpfrank.com/demo/flickr-album-gallery/)
 
 ### Check Pro Plugin Demo - [Flickr Album Gallery Pro](http://wpfrank.com/demo/flickr-album-gallery-pro/)
@@ -25,6 +40,7 @@ Flickr Album Gallery plugin is such an easy to use and fully documented ready pl
 ### Language Contributors
 
 French Translation by [Alexey Gorbenko - Алексей Горбенко](http://remont-kompov.ru/)
+Hindi Translation by [Faraz Khan - Алексей Горбенко](http://wpfrank.com/)
 
 Please contribute to translate our plugin. Contact us at wpfrankhelp (at) gmail (dot) com.
 
@@ -38,6 +54,14 @@ Please contribute to translate our plugin. Contact us at wpfrankhelp (at) gmail 
 Please use WordPress [support forum](http://wordpress.org/support/plugin/flickr-album-gallery) to ask any query regarding any issue.
 
 == Changelog ==
+
+= 2.1.0 =
+* Compatibility will all WordPress default themes
+
+= 2.0.10 =
+* Language file updated
+* Hindi language translation added
+
 
 = 2.0.9 =
 * New update
