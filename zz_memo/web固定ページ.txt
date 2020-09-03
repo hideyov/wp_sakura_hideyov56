@@ -61,4 +61,10 @@ Notice: Undefined index: pickupnav_music in /home/hideyov/www/blog/wp-content/th
 
 introページのサイドバーに「ページナビゲーション」を表示させる！
 
+******
+200903
+******
+
+fish の固定ページをトップページに表示できない。。。
+
 

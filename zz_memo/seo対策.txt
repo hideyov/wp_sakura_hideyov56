@@ -1,0 +1,33 @@
+Google検索に引っかかるようにする施策
+
+******
+200903
+******
+
+「WordPressサイト作ったけど検索されない？すぐにGoogle検索に反映・インデックスさせる方法」
+https://jinsei-nomad.com/fetchasgoogle1/617/
+
+の2番目の「『Google XML Sitemap』を入れてサイトマップを送信する」
+
+にもとづいて
+
+Google XML Sitemap　をインストールして有効化
+
+設定 > XML-Sitemap
+
+[????] 
+"検索エンジンはまだ通知されていません
+Recent Support Topics / News Disable
+Error when connecting to Bing/ Google
+Wrong sitelink of google
+You sitemap generator is setting dates to 1970-01-01 00:00
+あなたのサイトマップのインデックスファイルのURL: https://www.hideyov.com/blog/sitemap.xml
+検索エンジンは通知されていません。あなたのサイトマップを知らせるには投稿を書いてください。
+" 
+
+と表示されるのだが????
+
+Google Search Console にログインして
+
+「新しいサイトマップの追加」からサイトマップのURLを入力して送信したが、
+[????] ステータス「送信できませんでした」

@@ -1,0 +1,7 @@
+single.php の 53行目、the_post_thumbnail('medium') から large に変更した
+
+<?php if(has_post_thumbnail() && $page == 1): ?>
+<div class="catch">
+	<?php the_post_thumbnail('large'); ?>
+</div>
+<?php endif; ?>
