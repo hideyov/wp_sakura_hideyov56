@@ -1,0 +1,7 @@
+id_rsa.pubのパスワード（パスフレーズ？）
+
+dotfiles54config
+
+key is at 
+~/.ssh/id_rsa.pub
+
